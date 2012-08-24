@@ -1,0 +1,98 @@
+//  =====================
+//  = Fluid grid Mixins =
+//  =====================
+
+
+// Responsive grid
+// 1. cols : number of grid columns
+// 2. mode : gutters, gutterleft, samegutter
+
+@mixin fluid-grid($cols, $mode:'gutters') {
+	float: left;
+	@include box-sizing(border-box);
+
+	$target : $cols * $column-width-px + ($cols - 1) * $gutter-width-px;
+	width : percentage( $target / $site-width-px );
+
+	// cols have semi gutter on left and right (ex: col=54 & gut=13 + 13)
+	// use when container is transparent
+	@if $mode == 'gutters' {
+		margin-right : $gutter-width / 2;
+		margin-left : $gutter-width / 2;
+	}
+
+	// the 13 gutters have same size (ex : col=54 & gut=24)
+	// use when container is displayed
+	@if $mode == 'same-gutter' {
+		margin-left : $gutter-width;
+	}
+
+	// each col has a left gutter, except for the first one (ex: col=58 & gut=24)
+	// prefer the gutters method
+	@if $mode == 'gutter-left' {
+		margin-left : $gutter-width;
+
+		&:first-child {
+			margin-left:0;
+		}
+	}
+}
+
+
+//  ========================
+//  = Standard Grid Mixins =
+//  ========================
+
+// Standard grid
+// 1. cols : number of grid columns
+// 2. mode : gutters, gutterleft, samegutter
+
+@mixin grid($cols, $mode:'gutters') {
+	float: left;
+	@include box-sizing(border-box);
+
+	width : $cols * $column-width-px + ($cols - 1) * $gutter-width-px;
+
+	// cols have semi gutter on left and right (ex: col=54 & gut=13 + 13)
+	// use when container is transparent
+	@if $mode == 'gutters' {
+		margin-right : $gutter-width-px / 2;
+		margin-left : $gutter-width-px / 2;
+	}
+
+	// the 13 gutters have same size (ex : col=54 & gut=24)
+	// use when container is displayed
+	@if $mode == 'same-gutter' {
+		margin-left : $gutter-width-px;
+	}
+
+	// each col has a left gutter, except for the first one (ex: col=58 & gut=24)
+	// prefer the gutters method
+	@if $mode == 'gutter-left' {
+		margin-left : $gutter-width-px;
+
+		&:first-child {
+			margin-left:0;
+		}
+	}
+}
+
+
+// In addition to mixin grid
+// add a clearfix and no margin for the first element of each line
+// 1. cols : number of grid columns
+
+@mixin gallery($cols) {	
+	
+	$nb: $columns / $cols;
+
+	&:nth-child(#{$nb}n+1) {
+		clear:both;
+		margin-left:0;
+	}
+}
+
+//  ==========
+//  = Mixins =
+//  ==========
+

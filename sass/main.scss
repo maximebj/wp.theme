@@ -1,0 +1,25 @@
+@import "compass";
+
+// Fonts
+@import "partials/fonts";
+
+// Core variables, mixins and functions
+@import "partials/variables";
+@import "partials/mixins";
+@import "partials/functions";
+
+// CSS normalize
+@import "partials/normalize";
+
+// Styled patterns and elements
+@import "partials/patterns";
+
+// Grid system and page structure
+@import "partials/layout";
+
+// libs
+
+
+// Media queries and responsive design
+@import "partials/responsive";
+

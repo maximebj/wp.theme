@@ -1,0 +1,112 @@
+//  ==============================
+//  = Patterns and common styles =
+//  ==============================
+
+html { font-size: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+
+body { 
+	background-color:$dark;
+	font-size:$font-size;
+	line-height:1.4;
+	font-family:$serif-font;
+	color:$text-color;
+}
+
+// the page
+.wrapper {
+	width:$site-width;
+	margin:0 auto;
+}
+
+// container for grid blocks
+.row {
+	@include pie-clearfix();
+}
+
+
+//  =========
+//  = Forms =
+//  =========
+
+input, textarea {
+	
+}
+
+input[type=text] {
+
+}
+
+input[type=text], textarea {
+	outline:none;
+}
+
+
+//  ===========
+//  = Buttons =
+//  ===========
+
+.button, input[type=submit], a[rel *=attachment] {
+	display: inline-block;
+
+	&:hover {
+	
+	}
+}
+
+
+//  =======================
+//  = Single post content =
+//  =======================
+
+.content {
+	a {
+		color:$link-color;
+		&:hover { color:$hover-color;}
+
+		&[rel *=attachment] {
+		}
+	}
+
+	ul { list-style-type:circle; }
+	ol { list-style-type:decimal; }
+	li { margin-left:30px; }
+
+	.alignright {
+		float:right;
+		margin:12px 0 12px 12px;
+	}
+
+	.alignleft {
+		float:left;
+		margin:12px 12px 12px 0;
+	}
+
+	.wp-caption {
+		background:#ccc;
+		border:1px solid #999;
+		text-align: center;
+		padding:5px;
+		width:auto !important;
+
+		p {
+			margin:0;
+			font-size: 12px;
+		}
+	}
+	
+	.gallery {
+		br { clear:none !important; display:none; }
+	}
+	
+	.gallery-item {
+		display:block;
+		@include fluid-grid(3);
+		text-align:center;
+		margin-bottom:$gutter-width;
+		margin-top:0;
+
+		img {
+			display:block;
+		}
+	}
+}
