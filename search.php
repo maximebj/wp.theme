@@ -1,1 +1,1 @@
-<?php get_template_part( 'archive-trip' ); ?>
+<?php get_template_part('parts/archive'); ?>

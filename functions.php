@@ -131,9 +131,9 @@ function secure_mail( $atts ){
 add_shortcode( 'mail', 'secure_mail' );
 
 
-//  ==================
-//  = Excerpt Length =
-//  ==================
+//  ===========
+//  = Excerpt =
+//  ===========
 
 /*
 add_filter('excerpt_length', 'my_excerpt_length');
@@ -141,6 +141,11 @@ add_filter('excerpt_length', 'my_excerpt_length');
 function my_excerpt_length($length) {
   return 20; 
 }
+
+function new_excerpt_more($more) {
+  return '...';
+}
+add_filter('excerpt_more', 'new_excerpt_more');
 */
 
 
