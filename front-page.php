@@ -3,7 +3,7 @@
 ?>
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post() ?>
-		<h2><a href="<?php the_permalink(); ?>"><?php the_title() ?></a></h2>
+		<h1><a href="<?php the_permalink(); ?>"><?php the_title() ?></a></h1>
 		
 		<p class="date"><?php the_date() ?></p>
 		
@@ -12,7 +12,7 @@
 		<?php the_excerpt() ?>
 
 		<p><?php the_tags('',', ','') ?></p>
-		<p><?php get_the_category() ?></p>
+		<p><?php the_category() ?></p>
 
 <?php 
 	endwhile;

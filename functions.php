@@ -38,7 +38,7 @@ add_image_size( 'slider', 540, 350, true );
 
 function smoothie_scripts() {
 
-  wp_enqueue_script( 'modernizr', '/js/libs/modernizr-2.6.1.min.js', false, '2.6.1', true);
+  wp_enqueue_script( 'modernizr', '/js/libs/modernizr-2.6.2.min.js', false, '2.6.2', true);
 
   wp_deregister_script( 'jquery' );
   wp_enqueue_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js', false, 'latest', true);
@@ -112,12 +112,22 @@ function create_post_type() {
 
   // taxonomy
   $labels = array('name' => '##taxo_name##'); 
-  register_taxonomy( '##taxo_name##, '##custom_type##', array( 'hierarchical' => true, 'labels' => $labels, 'query_var' => true, 'rewrite' => array( 'slug' => '####') ) );
+  register_taxonomy( '##taxo_name##, '##custom_type##', array( 'hierarchical' => true, 'public' => true, 'labels' => $labels, 'query_var' => true, 'rewrite' => array( 'slug' => '####') ) );
 
 }
 add_action( 'init', 'create_post_type' );
 
 */
+
+
+//  ===================================
+//  = Flush permalink on theme switch =
+//  ===================================
+
+function my_rewrite_flush() {
+    flush_rewrite_rules();
+}
+add_action( 'after_switch_theme', 'my_rewrite_flush' );
 
 
 //  ==============
@@ -201,6 +211,31 @@ remove_action('wp_head', 'adjacent_posts_rel_link', 10, 0);
 
 add_filter( 'use_default_gallery_style', '__return_false' );
 
+
+//  ======================================
+//  = Remove menu entries from Dashboard =
+//  ======================================
+
+/*
+
+function my_remove_menu_pages() {
+  remove_menu_page('link-manager.php');
+  remove_menu_page('tools.php');
+  remove_menu_page('edit-comments.php'); 
+
+  //remove_submenu_page('themes.php', 'widgets.php');
+  remove_submenu_page('themes.php', 'theme-editor.php');
+
+  $current_user = wp_get_current_user();
+
+  if($current_user->user_login != "admin") {
+    remove_menu_page('users.php');
+    remove_menu_page('wpcf7');
+    remove_menu_page('wpseo_dashboard');
+  }  
+}
+add_action( 'admin_menu', 'my_remove_menu_pages' );
+*/
 
 //  =================================
 //  = Hide Wordpress Update Message =
