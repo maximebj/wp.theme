@@ -11,8 +11,6 @@
   <title><?php wp_title('') ?></title>
 
   <link rel="stylesheet" href="<?php bloginfo('template_url') ?>/css/main.css">
-  
-  <script type="text/javascript" src="<?php bloginfo('template_url') ?>/js/libs/modernizr-2.6.2.min.js"></script>
 
   <!-- WP generated header -->
   <?php wp_head() ?>
@@ -21,7 +19,7 @@
 </head>
 
 <body <?php body_class() ?>>
-  
+
   <div class="wrapper">
 
     <header id="header">

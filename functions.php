@@ -38,11 +38,11 @@ add_image_size( 'slider', 540, 350, true );
 
 function smoothie_scripts() {
 
-  wp_enqueue_script( 'modernizr', '/js/libs/modernizr-2.6.2.min.js', false, '2.6.2', true);
+  wp_enqueue_script( 'modernizr', '/js/libs/modernizr-2.6.2.min.js', false, '2.6.2', false);
 
   wp_deregister_script( 'jquery' );
   wp_enqueue_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js', false, 'latest', true);
-  
+
   wp_enqueue_script( 'libs', get_template_directory_uri().'/js/libs.js', array('jquery'), '1.0', true );
   wp_enqueue_script( 'script', get_template_directory_uri().'/js/script.js', array('jquery'), '1.0', true );
 }
@@ -85,7 +85,7 @@ register_sidebar(array(
 
 /*
 function create_post_type() {
-     
+
   $labels = array(
     'name' => 's',
     'singular_name' => '',
@@ -93,25 +93,25 @@ function create_post_type() {
     'edit_item' => 'Modifier le',
     'menu_name' => 's'
   );
-    
+
   $args = array(
     'labels' => $labels,
     'public' => true,
     'publicly_queryable' => true,
-    'show_ui' => true, 
+    'show_ui' => true,
     'show_in_menu' => true,
-    'show_in_admin_bar' => true, 
+    'show_in_admin_bar' => true,
     'query_var' => true,
     'rewrite' => true,
-    'has_archive' => true, 
+    'has_archive' => true,
     'menu_position' => null,
     'supports' => array('title', 'editor','thumbnail')
   );
-    
+
   register_post_type('####',$args);
 
   // taxonomy
-  $labels = array('name' => '##taxo_name##'); 
+  $labels = array('name' => '##taxo_name##');
   register_taxonomy( '##taxo_name##, '##custom_type##', array( 'hierarchical' => true, 'public' => true, 'labels' => $labels, 'query_var' => true, 'rewrite' => array( 'slug' => '####') ) );
 
 }
@@ -149,7 +149,7 @@ add_shortcode( 'mail', 'secure_mail' );
 add_filter('excerpt_length', 'my_excerpt_length');
 
 function my_excerpt_length($length) {
-  return 20; 
+  return 20;
 }
 
 function new_excerpt_more($more) {
@@ -221,7 +221,7 @@ add_filter( 'use_default_gallery_style', '__return_false' );
 function my_remove_menu_pages() {
   remove_menu_page('link-manager.php');
   remove_menu_page('tools.php');
-  remove_menu_page('edit-comments.php'); 
+  remove_menu_page('edit-comments.php');
 
   //remove_submenu_page('themes.php', 'widgets.php');
   remove_submenu_page('themes.php', 'theme-editor.php');
@@ -232,7 +232,7 @@ function my_remove_menu_pages() {
     remove_menu_page('users.php');
     remove_menu_page('wpcf7');
     remove_menu_page('wpseo_dashboard');
-  }  
+  }
 }
 add_action( 'admin_menu', 'my_remove_menu_pages' );
 */
