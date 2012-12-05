@@ -82,14 +82,43 @@
 // add a clearfix and no margin for the first element of each line
 // 1. cols : number of grid columns
 
-@mixin gallery($cols) {	
-	
+@mixin gallery($cols) {
+
 	$nb: $columns / $cols;
 
 	&:nth-child(#{$nb}n+1) {
 		clear:both;
 		margin-left:0;
 	}
+}
+
+
+//  ========================
+//  = Media Queries Mixins =
+//  ========================
+
+@mixin desktop($breakpoint: 1024px) {
+
+  @media screen and (min-width: $breakpoint) {
+    @content;
+  }
+
+}
+
+@mixin tablet($breakpoint: 768px) {
+
+  @media screen and (min-width: $breakpoint) {
+    @content;
+  }
+
+}
+
+@mixin smartphone($breakpoint: 480px) {
+
+  @media screen and (min-width: $breakpoint) {
+    @content;
+  }
+
 }
 
 //  ==========

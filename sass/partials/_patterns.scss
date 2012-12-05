@@ -4,11 +4,11 @@
 
 html { font-size: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
 
-body { 
+body {
 	background-color:$dark;
 	font-size:$font-size;
 	line-height:1.4;
-	font-family:$serif-font;
+	font-family:$font;
 	color:$text-color;
 }
 
@@ -19,7 +19,7 @@ body {
 }
 
 // container for grid blocks
-.row {
+.clearfix {
 	@include pie-clearfix();
 }
 
@@ -29,7 +29,7 @@ body {
 //  =========
 
 input, textarea {
-	
+
 }
 
 input[type=text] {
@@ -49,7 +49,7 @@ input[type=text], textarea {
 	display: inline-block;
 
 	&:hover {
-	
+
 	}
 }
 
@@ -93,11 +93,11 @@ input[type=text], textarea {
 			font-size: 12px;
 		}
 	}
-	
+
 	.gallery {
 		br { clear:none !important; display:none; }
 	}
-	
+
 	.gallery-item {
 		display:block;
 		@include fluid-grid(3);
