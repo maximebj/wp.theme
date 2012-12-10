@@ -105,13 +105,22 @@
 
 }
 
-@mixin tablet($breakpoint: 768px) {
+@mixin tablet($breakpoint: 800px) {
 
   @media screen and (min-width: $breakpoint) {
     @content;
   }
 
 }
+
+@mixin only-tablet($breakpoint1: 800px, $breakpoint2: 481px) {
+
+  @media screen and (max-width: $breakpoint1) and (min-width: $breakpoint1) {
+    @content;
+  }
+
+}
+
 
 @mixin smartphone($breakpoint: 480px) {
 

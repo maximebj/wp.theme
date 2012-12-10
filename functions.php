@@ -219,7 +219,6 @@ add_filter( 'use_default_gallery_style', '__return_false' );
 /*
 
 function my_remove_menu_pages() {
-  remove_menu_page('link-manager.php');
   remove_menu_page('tools.php');
   remove_menu_page('edit-comments.php');
 
