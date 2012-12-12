@@ -38,7 +38,7 @@ add_image_size( 'slider', 540, 350, true );
 
 function smoothie_scripts() {
 
-  wp_enqueue_script( 'modernizr', '/js/libs/modernizr-2.6.2.min.js', false, '2.6.2', false);
+  wp_enqueue_script( 'modernizr', get_template_directory_uri().'/js/libs/modernizr-2.6.2.min.js', false, '2.6.2', false);
 
   wp_deregister_script( 'jquery' );
   wp_enqueue_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js', false, 'latest', true);
