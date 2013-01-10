@@ -130,7 +130,103 @@
 
 }
 
+@mixin retina() {
+
+  @media (min--moz-device-pixel-ratio: 1.5),
+         (-o-min-device-pixel-ratio: 3/2),
+         (-webkit-min-device-pixel-ratio: 1.5),
+         (min-device-pixel-ratio: 1.5),
+         (min-resolution: 144dpi),
+         (min-resolution: 1.5dppx)
+  {
+    @content;
+
+  }
+}
+
 //  ==========
 //  = Mixins =
 //  ==========
 
+// disable fields highlight
+
+@mixin noselect() {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+// Animations
+
+@mixin keyframes($animation-name) {
+  @-webkit-keyframes $animation-name {
+    @content;
+  }
+
+  @-moz-keyframes $animation-name {
+    @content;
+  }
+
+  @-ms-keyframes $animation-name{
+    @content;
+  }
+
+  @keyframes $animation-name {
+    @content;
+  }
+}
+
+@mixin no-animation{
+  @include experimental(animation, none, -moz, -webkit, -o, -ms, not -khtml, official);
+}
+
+@mixin animation-name($animation-name){
+  @include experimental(animation-name, $animation-name, -moz, -webkit, -o, -ms, not -khtml, official);
+}
+
+@mixin animation-iteration-count($iteration-count){
+    @include experimental(animation-iteration-count, $iteration-count, -moz, -webkit, -o, -ms, not -khtml, official);
+}
+
+@mixin animation-timing-function($timing-function){
+    @include experimental(animation-timing-function, $timing-function, -moz, -webkit, -o, -ms, not -khtml, official);
+}
+
+@mixin animation-duration($duration){
+    @include experimental(animation-duration, $duration, -moz, -webkit, -o, -ms, not -khtml, official);
+}
+
+@mixin animation-delay($delay){
+    @include experimental(animation-delay, $delay, -moz, -webkit, -o, -ms, not -khtml, official);
+}
+
+@mixin animation-fill-mode($fill-mode){
+    @include experimental(animation-fill-mode, $fill-mode, -moz, -webkit, -o, -ms, not -khtml, official);
+}
+
+
+// Placeholder styling
+
+@mixin input-placeholder {
+  @if $experimental-support-for-webkit {
+    &::-webkit-input-placeholder {
+      @content;
+    }
+  }
+  @if $experimental-support-for-mozilla {
+    &:-moz-placeholder {
+      @content;
+    }
+    &::-moz-placeholder {
+      @content;
+    }
+  }
+  @if $experimental-support-for-microsoft {
+    &:-ms-input-placeholder {
+      @content;
+    }
+  }
+}

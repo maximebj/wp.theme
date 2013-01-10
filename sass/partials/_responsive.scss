@@ -3,13 +3,13 @@
 //  =======================================
 
 
-@media screen and (max-width: 1024px) {
+@include desktop() {
 
 
 }
 
 
-@media screen and (max-width: 768px) {
+@include tablet() {
 
 	// hide wordpress admin bar
 	html[lang=fr-FR] {
@@ -22,7 +22,12 @@
 }
 
 
-@media screen and (max-width: 480px) {
-
+@include smartphone() {
 
 }
+
+
+@include retina() {
+
+}
+

@@ -243,7 +243,7 @@ input[type=text], textarea {
   .content .gallery-item img {
     display: block; }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 800px) {
   /* line 15, ../sass/partials/_responsive.scss */
   html[lang=fr-FR] {
     margin-top: 0 !important; }
