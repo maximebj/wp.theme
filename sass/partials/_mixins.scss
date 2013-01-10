@@ -8,34 +8,34 @@
 // 2. mode : gutters, gutterleft, samegutter
 
 @mixin fluid-grid($cols, $mode:'gutters') {
-	float: left;
-	@include box-sizing(border-box);
+    float: left;
+    @include box-sizing(border-box);
 
-	$target : $cols * $column-width-px + ($cols - 1) * $gutter-width-px;
-	width : percentage( $target / $site-width-px );
+    $target : $cols * $column-width-px + ($cols - 1) * $gutter-width-px;
+    width : percentage( $target / $site-width-px );
 
-	// cols have semi gutter on left and right (ex: col=54 & gut=13 + 13)
-	// use when container is transparent
-	@if $mode == 'gutters' {
-		margin-right : $gutter-width / 2;
-		margin-left : $gutter-width / 2;
-	}
+    // cols have semi gutter on left and right (ex: col=54 & gut=13 + 13)
+    // use when container is transparent
+    @if $mode == 'gutters' {
+        margin-right : $gutter-width / 2;
+        margin-left : $gutter-width / 2;
+    }
 
-	// the 13 gutters have same size (ex : col=54 & gut=24)
-	// use when container is displayed
-	@if $mode == 'same-gutter' {
-		margin-left : $gutter-width;
-	}
+    // the 13 gutters have same size (ex : col=54 & gut=24)
+    // use when container is displayed
+    @if $mode == 'same-gutter' {
+        margin-left : $gutter-width;
+    }
 
-	// each col has a left gutter, except for the first one (ex: col=58 & gut=24)
-	// prefer the gutters method
-	@if $mode == 'gutter-left' {
-		margin-left : $gutter-width;
+    // each col has a left gutter, except for the first one (ex: col=58 & gut=24)
+    // prefer the gutters method
+    @if $mode == 'gutter-left' {
+        margin-left : $gutter-width;
 
-		&:first-child {
-			margin-left:0;
-		}
-	}
+        &:first-child {
+            margin-left:0;
+        }
+    }
 }
 
 
@@ -48,33 +48,33 @@
 // 2. mode : gutters, gutterleft, samegutter
 
 @mixin grid($cols, $mode:'gutters') {
-	float: left;
-	@include box-sizing(border-box);
+    float: left;
+    @include box-sizing(border-box);
 
-	width : $cols * $column-width-px + ($cols - 1) * $gutter-width-px;
+    width : $cols * $column-width-px + ($cols - 1) * $gutter-width-px;
 
-	// cols have semi gutter on left and right (ex: col=54 & gut=13 + 13)
-	// use when container is transparent
-	@if $mode == 'gutters' {
-		margin-right : $gutter-width-px / 2;
-		margin-left : $gutter-width-px / 2;
-	}
+    // cols have semi gutter on left and right (ex: col=54 & gut=13 + 13)
+    // use when container is transparent
+    @if $mode == 'gutters' {
+        margin-right : $gutter-width-px / 2;
+        margin-left : $gutter-width-px / 2;
+    }
 
-	// the 13 gutters have same size (ex : col=54 & gut=24)
-	// use when container is displayed
-	@if $mode == 'same-gutter' {
-		margin-left : $gutter-width-px;
-	}
+    // the 13 gutters have same size (ex : col=54 & gut=24)
+    // use when container is displayed
+    @if $mode == 'same-gutter' {
+        margin-left : $gutter-width-px;
+    }
 
-	// each col has a left gutter, except for the first one (ex: col=58 & gut=24)
-	// prefer the gutters method
-	@if $mode == 'gutter-left' {
-		margin-left : $gutter-width-px;
+    // each col has a left gutter, except for the first one (ex: col=58 & gut=24)
+    // prefer the gutters method
+    @if $mode == 'gutter-left' {
+        margin-left : $gutter-width-px;
 
-		&:first-child {
-			margin-left:0;
-		}
-	}
+        &:first-child {
+            margin-left:0;
+        }
+    }
 }
 
 
@@ -84,12 +84,12 @@
 
 @mixin gallery($cols) {
 
-	$nb: $columns / $cols;
+    $nb: $columns / $cols;
 
-	&:nth-child(#{$nb}n+1) {
-		clear:both;
-		margin-left:0;
-	}
+    &:nth-child(#{$nb}n+1) {
+        clear:both;
+        margin-left:0;
+    }
 }
 
 
@@ -130,6 +130,7 @@
 
 }
 
+
 @mixin retina() {
 
   @media (min--moz-device-pixel-ratio: 1.5),
@@ -144,9 +145,10 @@
   }
 }
 
-//  ==========
-//  = Mixins =
-//  ==========
+
+//  ====================
+//  = Standards Mixins =
+//  ====================
 
 // disable fields highlight
 
@@ -159,7 +161,56 @@
   user-select: none;
 }
 
-// Animations
+// Placeholder styling
+
+@mixin input-placeholder {
+  @if $experimental-support-for-webkit {
+    &::-webkit-input-placeholder {
+      @content;
+    }
+  }
+  @if $experimental-support-for-mozilla {
+    &:-moz-placeholder {
+      @content;
+    }
+    &::-moz-placeholder {
+      @content;
+    }
+  }
+  @if $experimental-support-for-microsoft {
+    &:-ms-input-placeholder {
+      @content;
+    }
+  }
+}
+
+
+//  ===================
+//  = Animation mixin =
+//  ===================
+
+// Use this mixin every time you make an animtion it forces the use of
+// GPU rendering and bring a much smoother experience to the end user
+@mixin hw-accelerated(){
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+// This mixin can be used when you see a flickering effect (black flash)
+// appening on a 3d animation.
+@mixin no-flickering(){
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+
+  -webkit-perspective: 1000;
+  -moz-perspective: 1000;
+  -ms-perspective: 1000;
+  perspective: 1000;
+}
 
 @mixin keyframes($animation-name) {
   @-webkit-keyframes $animation-name {
@@ -205,28 +256,4 @@
 
 @mixin animation-fill-mode($fill-mode){
     @include experimental(animation-fill-mode, $fill-mode, -moz, -webkit, -o, -ms, not -khtml, official);
-}
-
-
-// Placeholder styling
-
-@mixin input-placeholder {
-  @if $experimental-support-for-webkit {
-    &::-webkit-input-placeholder {
-      @content;
-    }
-  }
-  @if $experimental-support-for-mozilla {
-    &:-moz-placeholder {
-      @content;
-    }
-    &::-moz-placeholder {
-      @content;
-    }
-  }
-  @if $experimental-support-for-microsoft {
-    &:-ms-input-placeholder {
-      @content;
-    }
-  }
 }
