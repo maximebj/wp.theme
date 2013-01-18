@@ -180,53 +180,57 @@ body {
     display: table;
     clear: both; }
 
-/* line 39, ../sass/partials/_patterns.scss */
+/* line 27, ../sass/partials/_patterns.scss */
+.first {
+  margin-left: 0; }
+
+/* line 44, ../sass/partials/_patterns.scss */
 input[type=text], textarea {
   outline: none; }
 
-/* line 48, ../sass/partials/_patterns.scss */
+/* line 53, ../sass/partials/_patterns.scss */
 .button, input[type=submit], a[rel*=attachment] {
   display: inline-block; }
 
-/* line 62, ../sass/partials/_patterns.scss */
+/* line 67, ../sass/partials/_patterns.scss */
 .content a {
   color: #0088cc; }
-  /* line 64, ../sass/partials/_patterns.scss */
+  /* line 69, ../sass/partials/_patterns.scss */
   .content a:hover {
     color: #ff9933; }
-/* line 70, ../sass/partials/_patterns.scss */
+/* line 75, ../sass/partials/_patterns.scss */
 .content ul {
   list-style-type: circle; }
-/* line 71, ../sass/partials/_patterns.scss */
+/* line 76, ../sass/partials/_patterns.scss */
 .content ol {
   list-style-type: decimal; }
-/* line 72, ../sass/partials/_patterns.scss */
+/* line 77, ../sass/partials/_patterns.scss */
 .content li {
   margin-left: 30px; }
-/* line 74, ../sass/partials/_patterns.scss */
+/* line 79, ../sass/partials/_patterns.scss */
 .content .alignright {
   float: right;
   margin: 12px 0 12px 12px; }
-/* line 79, ../sass/partials/_patterns.scss */
+/* line 84, ../sass/partials/_patterns.scss */
 .content .alignleft {
   float: left;
   margin: 12px 12px 12px 0; }
-/* line 84, ../sass/partials/_patterns.scss */
+/* line 89, ../sass/partials/_patterns.scss */
 .content .wp-caption {
   background: #ccc;
   border: 1px solid #999;
   text-align: center;
   padding: 5px;
   width: auto !important; }
-  /* line 91, ../sass/partials/_patterns.scss */
+  /* line 96, ../sass/partials/_patterns.scss */
   .content .wp-caption p {
     margin: 0;
     font-size: 12px; }
-/* line 98, ../sass/partials/_patterns.scss */
+/* line 103, ../sass/partials/_patterns.scss */
 .content .gallery br {
   clear: none !important;
   display: none; }
-/* line 101, ../sass/partials/_patterns.scss */
+/* line 106, ../sass/partials/_patterns.scss */
 .content .gallery-item {
   display: block;
   float: left;
@@ -239,7 +243,7 @@ input[type=text], textarea {
   text-align: center;
   margin-bottom: 2.08333%;
   margin-top: 0; }
-  /* line 108, ../sass/partials/_patterns.scss */
+  /* line 113, ../sass/partials/_patterns.scss */
   .content .gallery-item img {
     display: block; }
 

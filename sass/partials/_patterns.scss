@@ -23,6 +23,11 @@ body {
 	@include pie-clearfix();
 }
 
+// cancel first block left margin in gutter-left mode
+.first {
+  margin-left:0;
+}
+
 
 //  =========
 //  = Forms =
