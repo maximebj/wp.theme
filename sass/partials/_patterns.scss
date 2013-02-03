@@ -33,16 +33,15 @@ body {
 //  = Forms =
 //  =========
 
-input, textarea {
-
+input[type=text],
+input[type=email],
+textarea {
+  @include box-sizing(border-box);
+  outline:none;
 }
 
-input[type=text] {
+textarea {
 
-}
-
-input[type=text], textarea {
-	outline:none;
 }
 
 
