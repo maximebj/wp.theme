@@ -2,34 +2,38 @@
 //  = Fluid grid Mixins =
 //  =====================
 
+// base column
+
+@mixin column() {
+  float: left;
+  @include box-sizing(border-box);
+}
+
 
 // Responsive grid
 // 1. cols : number of grid columns
-// 2. mode : gutters, gutterleft, samegutter
 
-@mixin fluid-grid($cols, $mode:$grid-mode) {
-    float: left;
-    @include box-sizing(border-box);
+@mixin fluid-grid($cols) {
 
     $target : $cols * $column-width-px + ($cols - 1) * $gutter-width-px;
     width : percentage( $target / $site-width-px );
 
     // cols have semi gutter on left and right (ex: col=54 & gut=13 + 13)
     // use when container is transparent
-    @if $mode == 'gutters' {
+    @if $grid-mode == 'gutters' {
         margin-right : $gutter-width / 2;
         margin-left : $gutter-width / 2;
     }
 
     // the 13 gutters have same size (ex : col=54 & gut=24)
     // use when container is displayed
-    @if $mode == 'same-gutter' {
+    @if $grid-mode == 'same-gutter' {
         margin-left : $gutter-width;
     }
 
     // each col has a left gutter, except for the first one (ex: col=58 & gut=24)
     // prefer the gutters method
-    @if $mode == 'gutter-left' {
+    @if $grid-mode == 'gutter-left' {
         margin-left : $gutter-width;
 
         &:first-child {
@@ -45,30 +49,27 @@
 
 // Standard grid
 // 1. cols : number of grid columns
-// 2. mode : gutters, gutterleft, samegutter
 
-@mixin grid($cols, $mode:'gutters') {
-    float: left;
-    @include box-sizing(border-box);
+@mixin grid($cols) {
 
     width : $cols * $column-width-px + ($cols - 1) * $gutter-width-px;
 
     // cols have semi gutter on left and right (ex: col=54 & gut=13 + 13)
     // use when container is transparent
-    @if $mode == 'gutters' {
+    @if $grid-mode == 'gutters' {
         margin-right : $gutter-width-px / 2;
         margin-left : $gutter-width-px / 2;
     }
 
     // the 13 gutters have same size (ex : col=54 & gut=24)
     // use when container is displayed
-    @if $mode == 'same-gutter' {
+    @if $grid-mode == 'same-gutter' {
         margin-left : $gutter-width-px;
     }
 
     // each col has a left gutter, except for the first one (ex: col=58 & gut=24)
     // prefer the gutters method
-    @if $mode == 'gutter-left' {
+    @if $grid-mode == 'gutter-left' {
         margin-left : $gutter-width-px;
 
         &:first-child {
@@ -88,7 +89,10 @@
 
     &:nth-child(#{$nb}n+1) {
         clear:both;
-        margin-left:0;
+
+        @if $grid-mode == 'gutter-left' {
+          margin-left:0;
+        }
     }
 }
 
@@ -97,7 +101,7 @@
 //  = Media Queries Mixins =
 //  ========================
 
-@mixin desktop($breakpoint: 1024px) {
+@mixin desktop($breakpoint: 769px) {
 
   @media screen and (min-width: $breakpoint) {
     @content;
@@ -105,17 +109,17 @@
 
 }
 
-@mixin tablet($breakpoint: 800px) {
+@mixin tablet($breakpoint: 768px) {
 
-  @media screen and (min-width: $breakpoint) {
+  @media screen and (max-width: $breakpoint) {
     @content;
   }
 
 }
 
-@mixin only-tablet($breakpoint1: 800px, $breakpoint2: 481px) {
+@mixin only-tablet($breakpoint1: 481px, $breakpoint2: 768px) {
 
-  @media screen and (max-width: $breakpoint1) and (min-width: $breakpoint1) {
+  @media screen and (min-width: $breakpoint1) and (max-width: $breakpoint2) {
     @content;
   }
 
@@ -124,7 +128,7 @@
 
 @mixin smartphone($breakpoint: 480px) {
 
-  @media screen and (min-width: $breakpoint) {
+  @media screen and (max-width: $breakpoint) {
     @content;
   }
 

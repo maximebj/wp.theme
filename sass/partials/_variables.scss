@@ -12,6 +12,7 @@ $gutter-width-px: 20px;
 $site-width-px: 960px;
 $grid-mode: 'gutters'; // gutters, gutter-left or same-gutter
 
+
 // Fluid vars
 
 $screen-width-px: 1024px;
@@ -22,6 +23,7 @@ $gutter-width : percentage($gutter-width-px / $site-width-px); // 26 / 960  = 2.
 // Base vars
 
 $site-width: 960px;
+$max-site-width:960px;
 $font-size: 16px;
 $background-color: #fff;
 $font: 'Helvetica Neue', Arial, sans-serif;

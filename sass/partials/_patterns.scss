@@ -10,6 +10,7 @@ body {
 	line-height:1.4;
 	font-family:$font;
 	color:$text-color;
+  max-width:$max-site-width;
 }
 
 // the page
@@ -18,14 +19,24 @@ body {
 	margin:0 auto;
 }
 
+
+//  ==============
+//  = Responsive =
+//  ==============
+
 // container for grid blocks
-.clearfix {
-	@include pie-clearfix();
+.row {
+  @include pie-clearfix();
 }
 
 // cancel first block left margin in gutter-left mode
 .first {
-  margin-left:0;
+  margin-left:0 !important;
+}
+
+// floated column
+.col {
+  @include column();
 }
 
 

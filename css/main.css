@@ -164,14 +164,15 @@ body {
   font-size: 16px;
   line-height: 1.4;
   font-family: "Helvetica Neue", Arial, sans-serif;
-  color: #202020; }
+  color: #202020;
+  max-width: 960px; }
 
-/* line 16, ../sass/partials/_patterns.scss */
+/* line 17, ../sass/partials/_patterns.scss */
 .wrapper {
   width: 960px;
   margin: 0 auto; }
 
-/* line 22, ../sass/partials/_patterns.scss */
+/* line 23, ../sass/partials/_patterns.scss */
 .clearfix {
   *zoom: 1; }
   /* line 38, ../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
@@ -180,11 +181,11 @@ body {
     display: table;
     clear: both; }
 
-/* line 27, ../sass/partials/_patterns.scss */
+/* line 28, ../sass/partials/_patterns.scss */
 .first {
   margin-left: 0; }
 
-/* line 38, ../sass/partials/_patterns.scss */
+/* line 39, ../sass/partials/_patterns.scss */
 input[type=text],
 input[type=email],
 textarea {
@@ -193,49 +194,49 @@ textarea {
   box-sizing: border-box;
   outline: none; }
 
-/* line 52, ../sass/partials/_patterns.scss */
+/* line 53, ../sass/partials/_patterns.scss */
 .button, input[type=submit], a[rel*=attachment] {
   display: inline-block; }
 
-/* line 66, ../sass/partials/_patterns.scss */
+/* line 67, ../sass/partials/_patterns.scss */
 .content a {
   color: #0088cc; }
-  /* line 68, ../sass/partials/_patterns.scss */
+  /* line 69, ../sass/partials/_patterns.scss */
   .content a:hover {
     color: #ff9933; }
-/* line 74, ../sass/partials/_patterns.scss */
+/* line 75, ../sass/partials/_patterns.scss */
 .content ul {
   list-style-type: circle; }
-/* line 75, ../sass/partials/_patterns.scss */
+/* line 76, ../sass/partials/_patterns.scss */
 .content ol {
   list-style-type: decimal; }
-/* line 76, ../sass/partials/_patterns.scss */
+/* line 77, ../sass/partials/_patterns.scss */
 .content li {
   margin-left: 30px; }
-/* line 78, ../sass/partials/_patterns.scss */
+/* line 79, ../sass/partials/_patterns.scss */
 .content .alignright {
   float: right;
   margin: 12px 0 12px 12px; }
-/* line 83, ../sass/partials/_patterns.scss */
+/* line 84, ../sass/partials/_patterns.scss */
 .content .alignleft {
   float: left;
   margin: 12px 12px 12px 0; }
-/* line 88, ../sass/partials/_patterns.scss */
+/* line 89, ../sass/partials/_patterns.scss */
 .content .wp-caption {
   background: #ccc;
   border: 1px solid #999999;
   text-align: center;
   padding: 5px;
   width: auto !important; }
-  /* line 95, ../sass/partials/_patterns.scss */
+  /* line 96, ../sass/partials/_patterns.scss */
   .content .wp-caption p {
     margin: 0;
     font-size: 12px; }
-/* line 102, ../sass/partials/_patterns.scss */
+/* line 103, ../sass/partials/_patterns.scss */
 .content .gallery br {
   clear: none !important;
   display: none; }
-/* line 105, ../sass/partials/_patterns.scss */
+/* line 106, ../sass/partials/_patterns.scss */
 .content .gallery-item {
   display: block;
   float: left;
@@ -248,7 +249,7 @@ textarea {
   text-align: center;
   margin-bottom: 2.08333%;
   margin-top: 0; }
-  /* line 112, ../sass/partials/_patterns.scss */
+  /* line 113, ../sass/partials/_patterns.scss */
   .content .gallery-item img {
     display: block; }
 
