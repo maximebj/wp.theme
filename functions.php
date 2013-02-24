@@ -97,22 +97,15 @@ function create_post_type() {
   $args = array(
     'labels' => $labels,
     'public' => true,
-    'publicly_queryable' => true,
-    'show_ui' => true,
-    'show_in_menu' => true,
-    'show_in_admin_bar' => true,
-    'query_var' => true,
-    'rewrite' => true,
     'has_archive' => true,
-    'menu_position' => null,
     'supports' => array('title', 'editor','thumbnail')
   );
 
   register_post_type('####',$args);
 
   // taxonomy
-  $labels = array('name' => '##taxo_name##');
-  register_taxonomy( '##taxo_name##, '##custom_type##', array( 'hierarchical' => true, 'public' => true, 'labels' => $labels, 'query_var' => true, 'rewrite' => array( 'slug' => '####') ) );
+  $labels = array('name' => '####');
+  register_taxonomy( '####', '####', array( 'hierarchical' => true, 'public' => true, 'labels' => $labels, 'query_var' => true ));
 
 }
 add_action( 'init', 'create_post_type' );
@@ -247,4 +240,4 @@ function hide_wp_update_nag() {
 add_action('admin_menu','hide_wp_update_nag');
 */
 
-?>
+

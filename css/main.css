@@ -164,27 +164,39 @@ body {
   font-size: 16px;
   line-height: 1.4;
   font-family: "Helvetica Neue", Arial, sans-serif;
-  color: #202020; }
+  color: #202020;
+  max-width: 960px; }
 
-/* line 16, ../sass/partials/_patterns.scss */
+/* line 17, ../sass/partials/_patterns.scss */
 .wrapper {
   width: 960px;
   margin: 0 auto; }
 
-/* line 22, ../sass/partials/_patterns.scss */
-.clearfix {
+/* line 28, ../sass/partials/_patterns.scss */
+.row {
   *zoom: 1; }
   /* line 38, ../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
-  .clearfix:after {
+  .row:after {
     content: "";
     display: table;
     clear: both; }
 
-/* line 27, ../sass/partials/_patterns.scss */
+/* line 33, ../sass/partials/_patterns.scss */
 .first {
-  margin-left: 0; }
+  margin-left: 0 !important; }
 
-/* line 38, ../sass/partials/_patterns.scss */
+/* line 47, ../sass/partials/_patterns.scss */
+a {
+  color: #0088cc;
+  -webkit-transition: color 0.2s ease-in-out;
+  -moz-transition: color 0.2s ease-in-out;
+  -o-transition: color 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out; }
+  /* line 51, ../sass/partials/_patterns.scss */
+  a:hover {
+    color: #ff9933; }
+
+/* line 60, ../sass/partials/_patterns.scss */
 input[type=text],
 input[type=email],
 textarea {
@@ -193,70 +205,66 @@ textarea {
   box-sizing: border-box;
   outline: none; }
 
-/* line 52, ../sass/partials/_patterns.scss */
+/* line 74, ../sass/partials/_patterns.scss */
 .button, input[type=submit], a[rel*=attachment] {
   display: inline-block; }
 
-/* line 66, ../sass/partials/_patterns.scss */
+/* line 88, ../sass/partials/_patterns.scss */
 .content a {
   color: #0088cc; }
-  /* line 68, ../sass/partials/_patterns.scss */
+  /* line 90, ../sass/partials/_patterns.scss */
   .content a:hover {
     color: #ff9933; }
-/* line 74, ../sass/partials/_patterns.scss */
+/* line 96, ../sass/partials/_patterns.scss */
 .content ul {
   list-style-type: circle; }
-/* line 75, ../sass/partials/_patterns.scss */
+/* line 97, ../sass/partials/_patterns.scss */
 .content ol {
   list-style-type: decimal; }
-/* line 76, ../sass/partials/_patterns.scss */
+/* line 98, ../sass/partials/_patterns.scss */
 .content li {
   margin-left: 30px; }
-/* line 78, ../sass/partials/_patterns.scss */
+/* line 100, ../sass/partials/_patterns.scss */
 .content .alignright {
   float: right;
   margin: 12px 0 12px 12px; }
-/* line 83, ../sass/partials/_patterns.scss */
+/* line 105, ../sass/partials/_patterns.scss */
 .content .alignleft {
   float: left;
   margin: 12px 12px 12px 0; }
-/* line 88, ../sass/partials/_patterns.scss */
+/* line 110, ../sass/partials/_patterns.scss */
 .content .wp-caption {
   background: #ccc;
   border: 1px solid #999999;
   text-align: center;
   padding: 5px;
   width: auto !important; }
-  /* line 95, ../sass/partials/_patterns.scss */
+  /* line 117, ../sass/partials/_patterns.scss */
   .content .wp-caption p {
     margin: 0;
     font-size: 12px; }
-/* line 102, ../sass/partials/_patterns.scss */
+/* line 124, ../sass/partials/_patterns.scss */
 .content .gallery br {
   clear: none !important;
   display: none; }
-/* line 105, ../sass/partials/_patterns.scss */
+/* line 127, ../sass/partials/_patterns.scss */
 .content .gallery-item {
   display: block;
-  float: left;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
   width: 22.91667%;
   margin-right: 1.04167%;
   margin-left: 1.04167%;
   text-align: center;
   margin-bottom: 2.08333%;
   margin-top: 0; }
-  /* line 112, ../sass/partials/_patterns.scss */
+  /* line 134, ../sass/partials/_patterns.scss */
   .content .gallery-item img {
     display: block; }
 
-@media screen and (min-width: 800px) {
-  /* line 15, ../sass/partials/_responsive.scss */
+@media screen and (max-width: 768px) {
+  /* line 12, ../sass/partials/_responsive.scss */
   html[lang=fr-FR] {
     margin-top: 0 !important; }
 
-  /* line 18, ../sass/partials/_responsive.scss */
+  /* line 15, ../sass/partials/_responsive.scss */
   #wpadminbar {
     display: none; } }
