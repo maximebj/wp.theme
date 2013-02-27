@@ -9,6 +9,11 @@
   @include box-sizing(border-box);
 }
 
+@mixin first() {
+  clear:both;
+  margin-left:0;
+}
+
 // Responsive grid
 // 1. cols : number of grid columns
 

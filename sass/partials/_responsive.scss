@@ -2,11 +2,29 @@
 //  = Media Queries for responsive design =
 //  =======================================
 
-@include desktop() {
+@include desktop($tablet+1px) {
 
 }
 
-@include tablet() {
+@include tablet($tablet) {
+
+  // Common
+
+
+  // Header
+
+
+  // Home
+
+
+  // Archive
+
+
+  // Single
+
+
+  // Page
+
 
 	// hide wordpress admin bar
 	html[lang=fr-FR] {
@@ -18,13 +36,31 @@
 
 }
 
+@include only-tablet($smartphone+1px, $tablet) {
 
-@include smartphone() {
+}
+
+
+@include smartphone($smartphone) {
+
+  // Common
+
+
+  // Header
+
+
+  // Home
+
+
+  // Archive
+
+
+  // Single
+
+
+  // Page
+
 
 }
 
-
-@include retina() {
-
-}
 

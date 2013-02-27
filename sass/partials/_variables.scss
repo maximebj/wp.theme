@@ -20,6 +20,12 @@ $site-width: percentage($site-width-px / $screen-width-px); // 960 / 1024 = 93.7
 $gutter-width : percentage($gutter-width-px / $site-width-px); // 26 / 960  = 2.708 %
 
 
+// Media Queries vars
+
+$tablet:900px;
+$smartphone:700px;
+
+
 // Base vars
 
 $site-width: 960px;

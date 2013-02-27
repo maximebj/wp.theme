@@ -256,11 +256,11 @@ textarea {
   .content .gallery-item img {
     display: block; }
 
-@media screen and (max-width: 768px) {
-  /* line 12, ../sass/partials/_responsive.scss */
+@media screen and (max-width: 900px) {
+  /* line 30, ../sass/partials/_responsive.scss */
   html[lang=fr-FR] {
     margin-top: 0 !important; }
 
-  /* line 15, ../sass/partials/_responsive.scss */
+  /* line 33, ../sass/partials/_responsive.scss */
   #wpadminbar {
     display: none; } }
