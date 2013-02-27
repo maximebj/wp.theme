@@ -36,7 +36,7 @@ button, input, select, textarea { font-size: 100%; margin: 0; vertical-align: ba
 // 2. Allow styling of clickable form elements in iOS
 button, input[type="button"], input[type="reset"], input[type="submit"] { cursor: pointer; -webkit-appearance: button; }
 
-// Remove default vertical scrollbar in IE6/7/8/9 
+// Remove default vertical scrollbar in IE6/7/8/9
 textarea { overflow: auto; vertical-align: top; }
 
 // Table
@@ -47,7 +47,6 @@ table { border-collapse: collapse; border-spacing: 0; }
 ::selection { background: $hightlight-color; color: invert($hightlight-color); text-shadow: none; }
 
 // Links
-a { color: $link-color; }
 a:focus, a:hover, a:active { outline: 0; }
 
 // Base type
