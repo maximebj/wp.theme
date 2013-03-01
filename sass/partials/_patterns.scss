@@ -97,6 +97,19 @@ textarea {
 	ol { list-style-type:decimal; }
 	li { margin-left:30px; }
 
+  // Oembed styles
+
+  .twitter-tweet {
+    width:100%;
+  }
+
+  iframe {
+    width:100% !important;
+  }
+
+
+  // Images alignment
+
 	.alignright {
 		float:right;
 		margin:12px 0 12px 12px;
@@ -119,6 +132,8 @@ textarea {
 			font-size: 12px;
 		}
 	}
+
+  // Gallery
 
 	.gallery {
 		br { clear:none !important; display:none; }
