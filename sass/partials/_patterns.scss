@@ -5,17 +5,17 @@
 html { font-size: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
 
 body {
-	background-color:$dark;
+	background-color:$light;
 	font-size:$font-size;
 	line-height:1.4;
 	font-family:$font;
 	color:$text-color;
-  max-width:$max-site-width;
 }
 
-// the page
 .wrapper {
-	width:$site-width;
+	// max-width:$max-site-width; // Responsive site
+	// OR
+	// width:$site-width; // Standard site
 	margin:0 auto;
 }
 
@@ -37,6 +37,19 @@ body {
 // floated column
 %col {
   @include column();
+}
+
+// fluid images
+img {
+	max-width:100%;
+	height:auto;
+}
+
+// Box sizing : border box
+div,
+article,
+a {
+	@include box-sizing(border-box);
 }
 
 

@@ -1,5 +1,5 @@
 
-	<article>
+	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<div class="meta">
 			<?php the_category() ?> 
 			<?php the_tags('',', ','') ?>

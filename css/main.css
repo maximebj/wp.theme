@@ -107,7 +107,7 @@ hr {
 /* line 59, ../sass/partials/_normalize.scss */
 pre, code {
   font-family: monospace, monospace;
-  _font-family: "courier new", monospace;
+  _font-family: 'courier new', monospace;
   font-size: 1em; }
 
 /* line 61, ../sass/partials/_normalize.scss */
@@ -156,16 +156,14 @@ html {
 
 /* line 7, ../sass/partials/_patterns.scss */
 body {
-  background-color: black;
+  background-color: white;
   font-size: 16px;
   line-height: 1.4;
   font-family: "Helvetica Neue", Arial, sans-serif;
-  color: #202020;
-  max-width: 960px; }
+  color: #202020; }
 
-/* line 17, ../sass/partials/_patterns.scss */
+/* line 15, ../sass/partials/_patterns.scss */
 .wrapper {
-  width: 960px;
   margin: 0 auto; }
 
 /* line 28, ../sass/partials/_patterns.scss */
@@ -181,18 +179,31 @@ body {
 .first {
   margin-left: 0 !important; }
 
-/* line 47, ../sass/partials/_patterns.scss */
+/* line 43, ../sass/partials/_patterns.scss */
+img {
+  max-width: 100%;
+  height: auto; }
+
+/* line 51, ../sass/partials/_patterns.scss */
+div,
+article,
+a {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* line 60, ../sass/partials/_patterns.scss */
 a {
   color: #0088cc;
   -webkit-transition: color 0.2s ease-in-out;
   -moz-transition: color 0.2s ease-in-out;
   -o-transition: color 0.2s ease-in-out;
   transition: color 0.2s ease-in-out; }
-  /* line 51, ../sass/partials/_patterns.scss */
+  /* line 64, ../sass/partials/_patterns.scss */
   a:hover {
     color: #ff9933; }
 
-/* line 60, ../sass/partials/_patterns.scss */
+/* line 73, ../sass/partials/_patterns.scss */
 input[type=text],
 input[type=email],
 textarea {
@@ -201,55 +212,55 @@ textarea {
   box-sizing: border-box;
   outline: none; }
 
-/* line 74, ../sass/partials/_patterns.scss */
+/* line 87, ../sass/partials/_patterns.scss */
 .button, input[type=submit], a[rel*=attachment] {
   display: inline-block; }
 
-/* line 88, ../sass/partials/_patterns.scss */
+/* line 101, ../sass/partials/_patterns.scss */
 .content a {
   color: #0088cc; }
-  /* line 90, ../sass/partials/_patterns.scss */
+  /* line 103, ../sass/partials/_patterns.scss */
   .content a:hover {
     color: #ff9933; }
-/* line 96, ../sass/partials/_patterns.scss */
+/* line 109, ../sass/partials/_patterns.scss */
 .content ul {
   list-style-type: circle; }
-/* line 97, ../sass/partials/_patterns.scss */
+/* line 110, ../sass/partials/_patterns.scss */
 .content ol {
   list-style-type: decimal; }
-/* line 98, ../sass/partials/_patterns.scss */
+/* line 111, ../sass/partials/_patterns.scss */
 .content li {
   margin-left: 30px; }
-/* line 102, ../sass/partials/_patterns.scss */
+/* line 115, ../sass/partials/_patterns.scss */
 .content .twitter-tweet {
   width: 100%; }
-/* line 106, ../sass/partials/_patterns.scss */
+/* line 119, ../sass/partials/_patterns.scss */
 .content iframe {
   width: 100% !important; }
-/* line 113, ../sass/partials/_patterns.scss */
+/* line 126, ../sass/partials/_patterns.scss */
 .content .alignright {
   float: right;
   margin: 12px 0 12px 12px; }
-/* line 118, ../sass/partials/_patterns.scss */
+/* line 131, ../sass/partials/_patterns.scss */
 .content .alignleft {
   float: left;
   margin: 12px 12px 12px 0; }
-/* line 123, ../sass/partials/_patterns.scss */
+/* line 136, ../sass/partials/_patterns.scss */
 .content .wp-caption {
   background: #ccc;
-  border: 1px solid #999999;
+  border: 1px solid #999;
   text-align: center;
   padding: 5px;
   width: auto !important; }
-  /* line 130, ../sass/partials/_patterns.scss */
+  /* line 143, ../sass/partials/_patterns.scss */
   .content .wp-caption p {
     margin: 0;
     font-size: 12px; }
-/* line 139, ../sass/partials/_patterns.scss */
+/* line 152, ../sass/partials/_patterns.scss */
 .content .gallery br {
   clear: none !important;
   display: none; }
-/* line 142, ../sass/partials/_patterns.scss */
+/* line 155, ../sass/partials/_patterns.scss */
 .content .gallery-item {
   display: block;
   width: 22.91667%;
@@ -258,7 +269,7 @@ textarea {
   text-align: center;
   margin-bottom: 2.08333%;
   margin-top: 0; }
-  /* line 149, ../sass/partials/_patterns.scss */
+  /* line 162, ../sass/partials/_patterns.scss */
   .content .gallery-item img {
     display: block; }
 
