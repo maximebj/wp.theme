@@ -15,7 +15,9 @@
 	// among the datas, the custom type
 	$custom_type = $tax_object->object_type[0];
 
-  if (file_exists('archive-'.$custom_type.'.php')) {
-    get_template_part('archive-'.$custom_type);
-  }
+	if (file_exists('archive-'.$custom_type.'.php')) {
+		get_template_part('archive-'.$custom_type);
+	}  else {
+		get_template_part('archive');
+	}
 
