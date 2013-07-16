@@ -182,28 +182,30 @@ body {
 /* line 43, ../sass/partials/_patterns.scss */
 img {
   max-width: 100%;
-  height: auto; }
+  height: auto;
+  width: auto; }
 
-/* line 51, ../sass/partials/_patterns.scss */
+/* line 53, ../sass/partials/_patterns.scss */
 div,
 article,
-a {
+a,
+img {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-/* line 60, ../sass/partials/_patterns.scss */
+/* line 62, ../sass/partials/_patterns.scss */
 a {
   color: #0088cc;
   -webkit-transition: color 0.2s ease-in-out;
   -moz-transition: color 0.2s ease-in-out;
   -o-transition: color 0.2s ease-in-out;
   transition: color 0.2s ease-in-out; }
-  /* line 64, ../sass/partials/_patterns.scss */
+  /* line 66, ../sass/partials/_patterns.scss */
   a:hover {
     color: #ff9933; }
 
-/* line 73, ../sass/partials/_patterns.scss */
+/* line 75, ../sass/partials/_patterns.scss */
 input[type=text],
 input[type=email],
 textarea {
@@ -212,55 +214,55 @@ textarea {
   box-sizing: border-box;
   outline: none; }
 
-/* line 87, ../sass/partials/_patterns.scss */
+/* line 89, ../sass/partials/_patterns.scss */
 .button, input[type=submit], a[rel*=attachment] {
   display: inline-block; }
 
-/* line 101, ../sass/partials/_patterns.scss */
+/* line 103, ../sass/partials/_patterns.scss */
 .content a {
   color: #0088cc; }
-  /* line 103, ../sass/partials/_patterns.scss */
+  /* line 105, ../sass/partials/_patterns.scss */
   .content a:hover {
     color: #ff9933; }
-/* line 109, ../sass/partials/_patterns.scss */
+/* line 111, ../sass/partials/_patterns.scss */
 .content ul {
   list-style-type: circle; }
-/* line 110, ../sass/partials/_patterns.scss */
+/* line 112, ../sass/partials/_patterns.scss */
 .content ol {
   list-style-type: decimal; }
-/* line 111, ../sass/partials/_patterns.scss */
+/* line 113, ../sass/partials/_patterns.scss */
 .content li {
   margin-left: 30px; }
-/* line 115, ../sass/partials/_patterns.scss */
+/* line 117, ../sass/partials/_patterns.scss */
 .content .twitter-tweet {
   width: 100%; }
-/* line 119, ../sass/partials/_patterns.scss */
+/* line 121, ../sass/partials/_patterns.scss */
 .content iframe {
   width: 100% !important; }
-/* line 126, ../sass/partials/_patterns.scss */
+/* line 128, ../sass/partials/_patterns.scss */
 .content .alignright {
   float: right;
   margin: 12px 0 12px 12px; }
-/* line 131, ../sass/partials/_patterns.scss */
+/* line 133, ../sass/partials/_patterns.scss */
 .content .alignleft {
   float: left;
   margin: 12px 12px 12px 0; }
-/* line 136, ../sass/partials/_patterns.scss */
+/* line 138, ../sass/partials/_patterns.scss */
 .content .wp-caption {
   background: #ccc;
   border: 1px solid #999;
   text-align: center;
   padding: 5px;
   width: auto !important; }
-  /* line 143, ../sass/partials/_patterns.scss */
+  /* line 145, ../sass/partials/_patterns.scss */
   .content .wp-caption p {
     margin: 0;
     font-size: 12px; }
-/* line 152, ../sass/partials/_patterns.scss */
+/* line 154, ../sass/partials/_patterns.scss */
 .content .gallery br {
   clear: none !important;
   display: none; }
-/* line 155, ../sass/partials/_patterns.scss */
+/* line 157, ../sass/partials/_patterns.scss */
 .content .gallery-item {
   display: block;
   width: 22.91667%;
@@ -269,7 +271,7 @@ textarea {
   text-align: center;
   margin-bottom: 2.08333%;
   margin-top: 0; }
-  /* line 162, ../sass/partials/_patterns.scss */
+  /* line 164, ../sass/partials/_patterns.scss */
   .content .gallery-item img {
     display: block; }
 

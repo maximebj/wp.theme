@@ -84,7 +84,7 @@ register_sidebar(array(
 //  ================
 
 /*
-function create_post_type() {
+function smoothie_create_post_type() {
 
 	$labels = array(
 		'name' => 's',
@@ -109,7 +109,7 @@ function create_post_type() {
 	register_taxonomy( '####', '####', array( 'hierarchical' => true, 'public' => true, 'labels' => $labels, 'query_var' => true ));
 
 }
-add_action( 'init', 'create_post_type' );
+add_action( 'init', 'smoothie_create_post_type' );
 
 */
 
@@ -118,10 +118,10 @@ add_action( 'init', 'create_post_type' );
 //  = Flush permalink on theme switch =
 //  ===================================
 
-function my_rewrite_flush() {
+function smoothie_rewrite_flush() {
 		flush_rewrite_rules();
 }
-add_action( 'after_switch_theme', 'my_rewrite_flush' );
+add_action( 'after_switch_theme', 'smoothie_rewrite_flush' );
 
 
 //  ==============
@@ -140,11 +140,12 @@ add_shortcode( 'mail', 'secure_mail' );
 //  ===========
 
 /*
-add_filter('excerpt_length', 'my_excerpt_length');
 
-function my_excerpt_length($length) {
+function smoothie_excerpt_length($length) {
 	return 20;
 }
+add_filter('excerpt_length', 'smoothie_excerpt_length');
+
 
 function new_excerpt_more($more) {
 	return '...';
@@ -164,7 +165,7 @@ add_editor_style();
 //  = Tiny MCE customization  =
 //  ===========================
 
-function customformatTinyMCE($init) {
+function smoothie_custom_TinyMCE($init) {
 
 	$init['theme_advanced_blockformats'] = 'p,h1,h2,h3,h4';
 	$init['theme_advanced_disable'] = 'strikethrough,underline,forecolor';
@@ -172,7 +173,7 @@ function customformatTinyMCE($init) {
 	return $init;
 }
 
-add_filter('tiny_mce_before_init', 'customformatTinyMCE' );
+add_filter('tiny_mce_before_init', 'smoothie_custom_TinyMCE' );
 
 
 //  =====================
@@ -212,7 +213,7 @@ add_filter( 'use_default_gallery_style', '__return_false' );
 
 /*
 
-function my_remove_menu_pages() {
+function smoothie_remove_menu_pages() {
 	remove_menu_page('tools.php');
 	remove_menu_page('edit-comments.php');
 
@@ -223,11 +224,15 @@ function my_remove_menu_pages() {
 
 	if($current_user->user_login != "admin") {
 		remove_menu_page('users.php');
-		remove_menu_page('wpcf7');
-		remove_menu_page('wpseo_dashboard');
+		
+		remove_menu_page('wpcf7'); // Contact form 7
+		remove_menu_page('gf_edit_forms'); // gravity forms
+		remove_menu_page('wpseo_dashboard'); // SEO by Yoast
+
+		remove_menu_page('edit.php?post_type=acf'); // Advanced Custom Fields
 	}
 }
-add_action( 'admin_menu', 'my_remove_menu_pages' );
+add_action( 'admin_menu', 'smoothie_remove_menu_pages' );
 */
 
 //  =================================
@@ -235,10 +240,10 @@ add_action( 'admin_menu', 'my_remove_menu_pages' );
 //  =================================
 
 /*
-function hide_wp_update_nag() {
+function smoothie_hide_wp_update_nag() {
 	remove_action( 'admin_notices', 'update_nag', 3 );
 }
-add_action('admin_menu','hide_wp_update_nag');
+add_action('admin_menu','smoothie_hide_wp_update_nag');
 */
 
 

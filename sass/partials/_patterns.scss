@@ -43,12 +43,14 @@ body {
 img {
 	max-width:100%;
 	height:auto;
+	width:auto; // avoid ie8 bug 
 }
 
 // Box sizing : border box
 div,
 article,
-a {
+a,
+img {
 	@include box-sizing(border-box);
 }
 
