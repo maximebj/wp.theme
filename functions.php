@@ -158,22 +158,26 @@ add_filter('excerpt_more', 'new_excerpt_more');
 //  = Editor styles =
 //  =================
 
-add_editor_style();
+function smoothie_theme_add_editor_styles() {
+    add_editor_style();
+}
+add_action( 'init', 'smoothie_theme_add_editor_styles' );
 
 
 //  ===========================
 //  = Tiny MCE customization  =
 //  ===========================
 
-function smoothie_custom_TinyMCE($init) {
+function smoothie_custom_tinymce($init) {
 
 	$init['theme_advanced_blockformats'] = 'p,h1,h2,h3,h4';
 	$init['theme_advanced_disable'] = 'strikethrough,underline,forecolor';
+	#$init['theme_advanced_styles'] = "Mon style=monstyle"; // custom styles
 
 	return $init;
 }
 
-add_filter('tiny_mce_before_init', 'smoothie_custom_TinyMCE' );
+add_filter('tiny_mce_before_init', 'smoothie_custom_tinymce' );
 
 
 //  =====================
@@ -205,6 +209,13 @@ remove_action('wp_head', 'parent_post_rel_link', 10, 0);
 remove_action('wp_head', 'adjacent_posts_rel_link', 10, 0);
 
 add_filter( 'use_default_gallery_style', '__return_false' );
+
+
+//  ====================================
+//  = Remove Accents in uploaded files =
+//  ====================================
+
+add_filter( 'sanitize_file_name', 'remove_accents' );
 
 
 //  ======================================

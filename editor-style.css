@@ -1,11 +1,11 @@
-td {
+#tinymce.wp-editor td {
 	padding:10px;
 }
 
-.alignleft {
+#tinymce.wp-editor .alignleft {
 	margin:0 20px 0 0;
 }
 
-.alignright {
+#tinymce.wp-editor .alignright {
 	margin: 0 0 0 20px;
 }
