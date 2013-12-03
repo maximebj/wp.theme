@@ -148,7 +148,7 @@ add_filter('excerpt_length', 'smoothie_excerpt_length');
 
 
 function new_excerpt_more($more) {
-	return '...';
+	return '…';
 }
 add_filter('excerpt_more', 'new_excerpt_more');
 */
