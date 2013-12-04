@@ -12,7 +12,7 @@
 		<?php the_content() ?>	
 	</div>
 
-	<p class="date"><?php the_date() ?></div>
+	<p class="date"><?php the_date() ?></p>
 	<p class="keywords"><?php the_tags('',' | ', '') ?></p>
 	<p class="category"><?php the_category(', ') ?></p>
 
