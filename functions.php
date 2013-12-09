@@ -36,17 +36,17 @@ add_image_size( 'slider', 540, 350, true );
 //  = Load scripts =
 //  ================
 
-function smoothie_scripts() {
+function add_js_scripts() {
 
-	wp_enqueue_script( 'modernizr', get_template_directory_uri().'/js/libs/modernizr-2.6.2.min.js', false, '2.6.2', false);
+	wp_enqueue_script( 'modernizr', get_template_directory_uri().'/js/libs/modernizr-2.7.1.min.js', false, '2.7.1', false);
 
 	wp_deregister_script( 'jquery' );
-	wp_enqueue_script( 'jquery', '//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js', false, '1.9.0', true);
+	wp_enqueue_script( 'jquery', '//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js', false, '1.9.0', true);
 
 	wp_enqueue_script( 'libs', get_template_directory_uri().'/js/libs.js', array('jquery'), '1.0', true );
 	wp_enqueue_script( 'script', get_template_directory_uri().'/js/script.js', array('jquery'), '1.0', true );
 }
-if (!is_admin()) add_action('wp_enqueue_scripts', 'smoothie_scripts');
+if (!is_admin()) add_action('wp_enqueue_scripts', 'add_js_scripts');
 
 
 //  =========
@@ -235,7 +235,7 @@ function smoothie_remove_menu_pages() {
 
 	if($current_user->user_login != "admin") {
 		remove_menu_page('users.php');
-		
+
 		remove_menu_page('wpcf7'); // Contact form 7
 		remove_menu_page('gf_edit_forms'); // gravity forms
 		remove_menu_page('wpseo_dashboard'); // SEO by Yoast
