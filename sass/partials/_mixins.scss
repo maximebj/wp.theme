@@ -105,8 +105,7 @@
 //  ========================
 //  = Media Queries Mixins =
 //  ========================
-
-@mixin desktop($breakpoint: 769px) {
+@mixin mq-min ($breakpoint) {
 
   @media screen and (min-width: $breakpoint) {
     @content;
@@ -114,24 +113,7 @@
 
 }
 
-@mixin tablet($breakpoint: 768px) {
-
-  @media screen and (max-width: $breakpoint) {
-    @content;
-  }
-
-}
-
-@mixin only-tablet($breakpoint1: 481px, $breakpoint2: 768px) {
-
-  @media screen and (min-width: $breakpoint1) and (max-width: $breakpoint2) {
-    @content;
-  }
-
-}
-
-
-@mixin smartphone($breakpoint: 480px) {
+@mixin mq-max ($breakpoint) {
 
   @media screen and (max-width: $breakpoint) {
     @content;
