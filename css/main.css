@@ -1,4 +1,4 @@
-/* normalize.css v2.1.2 | MIT License | git.io/normalize */
+/*! normalize.css v2.1.2 | MIT License | git.io/normalize */
 /* ==========================================================================
    HTML5 display definitions
    ========================================================================== */
@@ -413,7 +413,11 @@ img {
   height: auto;
   width: auto; }
 
-/* line 53, ../sass/partials/_patterns.scss */
+/* line 51, ../sass/partials/_patterns.scss */
+#map img {
+  max-width: inherit; }
+
+/* line 60, ../sass/partials/_patterns.scss */
 div,
 article,
 a,
@@ -422,18 +426,18 @@ img {
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-/* line 62, ../sass/partials/_patterns.scss */
+/* line 69, ../sass/partials/_patterns.scss */
 a {
   color: #0088cc;
   -webkit-transition: color 0.2s ease-in-out;
   -moz-transition: color 0.2s ease-in-out;
   -o-transition: color 0.2s ease-in-out;
   transition: color 0.2s ease-in-out; }
-  /* line 66, ../sass/partials/_patterns.scss */
+  /* line 73, ../sass/partials/_patterns.scss */
   a:hover {
     color: #ff9933; }
 
-/* line 75, ../sass/partials/_patterns.scss */
+/* line 82, ../sass/partials/_patterns.scss */
 input[type=text],
 input[type=email],
 textarea {
@@ -442,55 +446,55 @@ textarea {
   box-sizing: border-box;
   outline: none; }
 
-/* line 89, ../sass/partials/_patterns.scss */
+/* line 96, ../sass/partials/_patterns.scss */
 .button, input[type=submit], a[rel*=attachment] {
   display: inline-block; }
 
-/* line 103, ../sass/partials/_patterns.scss */
+/* line 110, ../sass/partials/_patterns.scss */
 .content a {
   color: #0088cc; }
-  /* line 105, ../sass/partials/_patterns.scss */
+  /* line 112, ../sass/partials/_patterns.scss */
   .content a:hover {
     color: #ff9933; }
-/* line 111, ../sass/partials/_patterns.scss */
+/* line 118, ../sass/partials/_patterns.scss */
 .content ul {
   list-style-type: circle; }
-/* line 112, ../sass/partials/_patterns.scss */
+/* line 119, ../sass/partials/_patterns.scss */
 .content ol {
   list-style-type: decimal; }
-/* line 113, ../sass/partials/_patterns.scss */
+/* line 120, ../sass/partials/_patterns.scss */
 .content li {
   margin-left: 30px; }
-/* line 117, ../sass/partials/_patterns.scss */
+/* line 124, ../sass/partials/_patterns.scss */
 .content .twitter-tweet {
   width: 100%; }
-/* line 121, ../sass/partials/_patterns.scss */
+/* line 128, ../sass/partials/_patterns.scss */
 .content iframe {
   width: 100% !important; }
-/* line 128, ../sass/partials/_patterns.scss */
+/* line 135, ../sass/partials/_patterns.scss */
 .content .alignright {
   float: right;
   margin: 12px 0 12px 12px; }
-/* line 133, ../sass/partials/_patterns.scss */
+/* line 140, ../sass/partials/_patterns.scss */
 .content .alignleft {
   float: left;
   margin: 12px 12px 12px 0; }
-/* line 138, ../sass/partials/_patterns.scss */
+/* line 145, ../sass/partials/_patterns.scss */
 .content .wp-caption {
   background: #ccc;
   border: 1px solid #999;
   text-align: center;
   padding: 5px;
   width: auto !important; }
-  /* line 145, ../sass/partials/_patterns.scss */
+  /* line 152, ../sass/partials/_patterns.scss */
   .content .wp-caption p {
     margin: 0;
     font-size: 12px; }
-/* line 154, ../sass/partials/_patterns.scss */
+/* line 161, ../sass/partials/_patterns.scss */
 .content .gallery br {
   clear: none !important;
   display: none; }
-/* line 157, ../sass/partials/_patterns.scss */
+/* line 164, ../sass/partials/_patterns.scss */
 .content .gallery-item {
   display: block;
   width: 22.91667%;
@@ -499,11 +503,11 @@ textarea {
   text-align: center;
   margin-bottom: 2.08333%;
   margin-top: 0; }
-  /* line 164, ../sass/partials/_patterns.scss */
+  /* line 171, ../sass/partials/_patterns.scss */
   .content .gallery-item img {
     display: block; }
 
-@media screen and (max-width: 900px) {
+@media screen and (min-width: 900px) {
   /* line 30, ../sass/partials/_responsive.scss */
   html[lang=fr-FR] {
     margin-top: 0 !important; }

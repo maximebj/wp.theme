@@ -43,7 +43,14 @@ body {
 img {
 	max-width:100%;
 	height:auto;
-	width:auto; // avoid ie8 bug 
+	width:auto; // avoid ie8 bug
+}
+
+// Fix for Google Maps UI
+#map {
+	img {
+		max-width: inherit;
+	}
 }
 
 // Box sizing : border box
