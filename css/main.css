@@ -532,70 +532,70 @@ textarea {
   outline: none; }
 
 /* line 237, ../sass/partials/_patterns.scss */
-.content a {
+.post-content a {
   color: #0088cc; }
   /* line 239, ../sass/partials/_patterns.scss */
-  .content a:hover {
+  .post-content a:hover {
     color: #ff9933; }
 /* line 245, ../sass/partials/_patterns.scss */
-.content ul {
+.post-content ul {
   list-style-type: circle; }
 /* line 246, ../sass/partials/_patterns.scss */
-.content ol {
+.post-content ol {
   list-style-type: decimal; }
 /* line 247, ../sass/partials/_patterns.scss */
-.content li {
+.post-content li {
   margin-left: 2em; }
 /* line 251, ../sass/partials/_patterns.scss */
-.content .twitter-tweet {
+.post-content .twitter-tweet {
   width: 100%; }
 /* line 255, ../sass/partials/_patterns.scss */
-.content iframe {
+.post-content iframe {
   width: 100% !important; }
 /* line 261, ../sass/partials/_patterns.scss */
-.content .alignright {
+.post-content .alignright {
   float: right;
   margin: 1em 0 1em 1em; }
 /* line 266, ../sass/partials/_patterns.scss */
-.content .alignleft {
+.post-content .alignleft {
   float: left;
   margin: 1em 1em 1em 0; }
 /* line 271, ../sass/partials/_patterns.scss */
-.content .wp-caption {
+.post-content .wp-caption {
   text-align: center;
   padding: .5em;
   width: auto !important; }
   /* line 276, ../sass/partials/_patterns.scss */
-  .content .wp-caption p {
+  .post-content .wp-caption p {
     margin: 0;
     font-size: .7em; }
 /* line 285, ../sass/partials/_patterns.scss */
-.content .gallery br {
+.post-content .gallery br {
   clear: none !important;
   display: none; }
 /* line 288, ../sass/partials/_patterns.scss */
-.content .gallery-columns-1 .gallery-item {
+.post-content .gallery-columns-1 .gallery-item {
   width: 100%; }
 /* line 289, ../sass/partials/_patterns.scss */
-.content .gallery-columns-2 .gallery-item {
+.post-content .gallery-columns-2 .gallery-item {
   width: 50%; }
 /* line 290, ../sass/partials/_patterns.scss */
-.content .gallery-columns-3 .gallery-item {
+.post-content .gallery-columns-3 .gallery-item {
   width: 33.33333333%; }
 /* line 291, ../sass/partials/_patterns.scss */
-.content .gallery-columns-4 .gallery-item {
+.post-content .gallery-columns-4 .gallery-item {
   width: 25%; }
 /* line 292, ../sass/partials/_patterns.scss */
-.content .gallery-columns-5 .gallery-item {
+.post-content .gallery-columns-5 .gallery-item {
   width: 20%; }
 /* line 293, ../sass/partials/_patterns.scss */
-.content .gallery-columns-6 .gallery-item {
+.post-content .gallery-columns-6 .gallery-item {
   width: 16.66666667%; }
 /* line 295, ../sass/partials/_patterns.scss */
-.content .gallery-item {
+.post-content .gallery-item {
   display: block;
   text-align: center;
   margin-bottom: 10px; }
   /* line 300, ../sass/partials/_patterns.scss */
-  .content .gallery-item img {
+  .post-content .gallery-item img {
     display: block; }
