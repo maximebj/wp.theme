@@ -14,16 +14,17 @@ body {
 
 h1 {
 	font-size: 2em;
+	margin: 0 0 1.5em 0;
 }
 
 h2 {
 	font-size: 1.6em;
-	margin: 1.5em 0;
+	margin: 0 0 1.5em 0;
 }
 
 h3 {
 	font-size: 1.3em;
-	margin: 1.5em 0;
+	margin: 0 0 1em 0;
 }
 
 p {
@@ -42,7 +43,7 @@ img {
 // default page wrapper
 .wrapper {
 	margin: 0 auto;
-	padding: 0 $site-padding;
+	padding: $site-padding;
 	max-width: $site-max-width;
 }
 
@@ -127,6 +128,7 @@ img {
 
 a {
   color: $link-color;
+  text-decoration: none;
   @include transition(color $transition-speed ease-in-out);
 
   &:hover { color: $hover-color; }
@@ -161,9 +163,53 @@ a {
 
 	a {
 		display: block;
-		text-decoration: none;
 	}
 }
+
+
+//  ========
+//  = Menu =
+//  ========
+
+/* TODO : improve for responsive menu */
+
+%menu {
+	@extend %unlist;
+
+	> li {
+		float:left;
+
+		// menu items
+		> a {
+
+		}
+	}
+
+	// sub menu items
+	.sub-menu {
+		display:none;
+		position:absolute;
+		left: 0;
+		top: 100%;
+
+		.sub-menu {
+			left:100%;
+			top:0;
+		}
+	}
+
+	// active item
+	.active {
+
+	}
+
+	// hover item
+	> li:hover > a {
+
+	}
+
+}
+
 
 
 //  =========
