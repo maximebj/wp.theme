@@ -127,7 +127,7 @@ img {
 
 a {
   color: $link-color;
-  @include transition(color $speed ease-in-out);
+  @include transition(color $transition-speed ease-in-out);
 
   &:hover { color: $hover-color; }
 }
