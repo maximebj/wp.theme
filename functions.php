@@ -128,9 +128,9 @@ add_action( 'after_switch_theme', 'smoothie_rewrite_flush' );
 //  = Shortcodes =
 //  ==============
 
-// shortcode : [mail address="me@mail.com"]
+/* shortcode : mailto:<?php echo do_shotcode('[mail address="me@mail.com"]'); ?> */
 function secure_mail( $atts ){
- return "<a href='mailto:".antispambot($atts['address'])."' title='Nous ecrire'>".antispambot($atts['address'])."</a>";
+ return antispambot($atts['address']);
 }
 add_shortcode( 'mail', 'secure_mail' );
 

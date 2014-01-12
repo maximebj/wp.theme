@@ -2,38 +2,6 @@
 //  = Variables =
 //  =============
 
-
-// Grid vars
-// See : http://tinyurl.com/6spx2p8 for list of round px sizes
-
-$columns: 12;
-$column-width-px: 60px;
-$gutter-width-px: 20px;
-$site-width-px: 960px;
-$grid-mode: 'gutters'; // gutters, gutter-left or same-gutter
-
-
-// Fluid vars
-
-$screen-width-px: 1024px;
-$site-width: percentage($site-width-px / $screen-width-px); // 960 / 1024 = 93.75%
-$gutter-width : percentage($gutter-width-px / $site-width-px); // 26 / 960  = 2.708 %
-
-
-// Media Queries vars
-
-$tablet:900px;
-$smartphone:700px;
-
-
-// Base vars
-
-$site-width: 960px;
-$max-site-width:960px;
-$font-size: 16px;
-$background-color: #fff;
-$font: 'Helvetica Neue', Arial, sans-serif;
-
 // Colors
 
 $text-color: #202020;
@@ -44,14 +12,50 @@ $hover-color: #F93;
 $dark : #000;
 $light: #fff;
 
+
+// Base vars
+
+$max-site-width:960px;
+$font-size: 16px;
+$background-color: #fff;
+$font: 'Helvetica Neue', Arial, sans-serif;
+
+
+// Responsive
+
+$tablet: 768px;
+$mobile: 480px;
+
+
 // Transitions
 
-$speed : .2s;
+$speed: .2s;
+
 
 // Spacing
 
 $vertical-space: 20px;
 
+
 // Other
 
+
+
+
+
+// *** Legacy vars (to be removed) ***
+$site-width: 960px;
+
+// Grid vars
+$columns: 12;
+$column-width-px: 60px;
+$gutter-width-px: 20px;
+$site-width-px: 960px;
+$grid-mode: 'gutters'; // gutters, gutter-left or same-gutter
+
+
+// Fluid vars
+$screen-width-px: 1024px;
+$site-width: percentage($site-width-px / $screen-width-px); // 960 / 1024 = 93.75%
+$gutter-width : percentage($gutter-width-px / $site-width-px); // 26 / 960  = 2.708 %
 

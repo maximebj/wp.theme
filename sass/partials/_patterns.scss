@@ -73,6 +73,27 @@ a {
   &:hover { color:$hover-color;}
 }
 
+
+//  =========
+//  = Lists =
+//  =========
+
+%unlist {
+	list-style-type: none;
+	padding:0;
+	margin:0;
+
+	li {
+		float:left;
+	}
+
+	a {
+		display:block;
+		text-decoration:none;
+	}
+}
+
+
 //  =========
 //  = Forms =
 //  =========
