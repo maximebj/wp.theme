@@ -77,6 +77,23 @@ img {
 .c3-5 { width: 60%; }
 .c4-5 { width: 80%; }
 
+// mobile columns
+
+@include mq-max ($mobile) {
+	.c1-2,
+	.c1-3,
+	.c2-3,
+	.c1-4,
+	.c3-4,
+	.c1-5,
+	.c2-5,
+	.c3-5,
+	.c4-5
+	{
+		width: 100%;
+	}
+}
+
 
 // clears for multilines cols
 .repeatable {
@@ -99,6 +116,7 @@ img {
 //  = Responsive =
 //  ==============
 
+
 // fluid images
 img {
 	max-width: 100%;
@@ -119,6 +137,13 @@ article,
 a,
 img {
 	@include box-sizing(border-box);
+}
+
+// something to hide in mobile
+@include mq-max ($mobile) {
+	.no-mobile {
+		display:none;
+	}
 }
 
 
