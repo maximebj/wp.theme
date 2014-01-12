@@ -2,6 +2,21 @@
 //  = Variables =
 //  =============
 
+// Base structure
+
+$site-padding: 0 15%;
+$col-padding: 20px;
+$site-max-width: 960px;
+
+
+// Branding colors
+
+$brand-main-color: #000;
+$brand-main-hover:  #000;
+$brand-constrast-color: #000;
+$brand-constrast-hover: #000;
+
+
 // Colors
 
 $text-color: #202020;
@@ -15,7 +30,6 @@ $light: #fff;
 
 // Base vars
 
-$max-site-width:960px;
 $font-size: 16px;
 $background-color: #fff;
 $font: 'Helvetica Neue', Arial, sans-serif;

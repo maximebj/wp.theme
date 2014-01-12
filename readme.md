@@ -1,4 +1,4 @@
-# Smoothie Wordpress base theme
+# Smoothie Framework Theme for Wordpress
 
 À développer…
 

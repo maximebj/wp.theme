@@ -1,27 +1,4 @@
-//  ========================
-//  = Responsive Functions =
-//  ========================
-
-
-// convert a font-size from px to em
-// 1. target : the wanted size in px
-// 2. context (opt) : reference font size (if in a div with a different font size to body)
-
-@function em($target, $context: $font-size) {
-	@if $target == 0 { @return 0; }
-	@return $target / $context + 0em;
-}
-
-
-// get the good % value of gutter insode a grided div
-// 1. columns number : like grid mixin, to define the total % width of the element
-
-@function inner-gutter($cols) {
-	
-	$target : $cols * $column-width-px + ($cols - 1) * $gutter-width-px;
-	$inner-width : percentage( $target / $site-width-px );
-	$inner-gutter : $gutter-width * $site-width / $inner-width;
-
-	@return $inner-gutter;
-}
+//  =============
+//  = Functions =
+//  =============
 

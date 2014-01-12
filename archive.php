@@ -1,9 +1,9 @@
 <?php
-	get_header()
+	get_header();
 ?>
 
-<?php 
-	
+<?php
+
 	// case : display a category
 	if (is_category()) {
 		$title = "Catégorie : ".single_tag_title( '', false);
@@ -29,14 +29,14 @@
 
 	<div id="blog">
 
-<?php 
+<?php
 	if ( have_posts() ) : while ( have_posts() ) : the_post();
 
 		get_template_part('parts/article');
-	
+
 	endwhile;
 	endif;
-?>		
+?>
 
 	</div>
 
@@ -45,5 +45,5 @@
 	</aside>
 
 <?php
-	get_footer()
+	get_footer();
 ?>
