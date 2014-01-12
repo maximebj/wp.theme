@@ -218,6 +218,7 @@ a {
 
 input[type=text],
 input[type=email],
+input[type=password],
 textarea {
   @include box-sizing(border-box);
   outline: none;
@@ -243,7 +244,7 @@ textarea {
 
 	ul { list-style-type: circle; }
 	ol { list-style-type: decimal; }
-	li { margin-left: 30px; }
+	li { margin-left: 2em; }
 
 	// Oembed styles
 
@@ -259,24 +260,22 @@ textarea {
 
 	.alignright {
 		float: right;
-		margin: 12px 0 12px 12px;
+		margin: 1em 0 1em 1em;
 	}
 
 	.alignleft {
 		float: left;
-		margin: 12px 12px 12px 0;
+		margin: 1em 1em 1em 0;
 	}
 
 	.wp-caption {
-		background: #ccc;
-		border: 1px solid #999;
 		text-align: center;
-		padding: 5px;
+		padding: .5em;
 		width:auto !important;
 
 		p {
 			margin: 0;
-			font-size: 12px;
+			font-size: .7em;
 		}
 	}
 
@@ -286,12 +285,17 @@ textarea {
 		br { clear: none !important; display:none; }
 	}
 
+	.gallery-columns-1 .gallery-item { width: 100%; }
+	.gallery-columns-2 .gallery-item { width: 50%; }
+	.gallery-columns-3 .gallery-item { width: 33.33333333%; }
+	.gallery-columns-4 .gallery-item { width: 25%; }
+	.gallery-columns-5 .gallery-item { width: 20%; }
+	.gallery-columns-6 .gallery-item { width: 16.66666667%; }
+
 	.gallery-item {
 		display: block;
-		@include fluid-grid(3);
 		text-align: center;
-		margin-bottom: $gutter-width;
-		margin-top: 0;
+		margin-bottom: $col-padding / 2;
 
 		img {
 			display: block;
