@@ -35,6 +35,20 @@ img {
 
 }
 
+@include mq-max($mobile) {
+	h1 {
+		font-size:1.6em;
+	}
+
+	h2 {
+		font-size:1.4em;
+	}
+
+	h3 {
+		font-size:1.2em;
+	}
+}
+
 
 //  ====================
 //  = Column structure =
@@ -43,7 +57,7 @@ img {
 // default page wrapper
 .wrapper {
 	margin: 0 auto;
-	padding: $site-padding;
+	padding: 0 $site-padding;
 	max-width: $site-max-width;
 }
 
@@ -77,23 +91,6 @@ img {
 .c3-5 { width: 60%; }
 .c4-5 { width: 80%; }
 
-// mobile columns
-
-@include mq-max ($mobile) {
-	.c1-2,
-	.c1-3,
-	.c2-3,
-	.c1-4,
-	.c3-4,
-	.c1-5,
-	.c2-5,
-	.c3-5,
-	.c4-5
-	{
-		width: 100%;
-	}
-}
-
 
 // clears for multilines cols
 .repeatable {
@@ -111,10 +108,38 @@ img {
   clear: both;
 }
 
+// some common responsive measures
 
-//  ==============
-//  = Responsive =
-//  ==============
+@include mq-max($mobile) {
+	body {
+		//font-size:14px; // all texts are smaller
+	}
+
+	.col {
+		// padding:$col-padding/2; // less padding on cols
+	}
+
+	.wrapper {
+		//padding-left:$site-padding/2; // padding on sides is smaller on mobile
+		//padding-right:$site-padding/2;
+	}
+}
+
+@include mq-max ($mobile) {
+	.c1-2,
+	.c1-3, .c2-3,
+	.c1-4, .c3-4,
+	.c1-5, .c2-5, .c3-5, .c4-5
+	{
+		width: 100%;
+		padding:0 0 $col-padding 0;
+	}
+}
+
+
+//  =====================
+//  = Responsive basics =
+//  =====================
 
 
 // fluid images
