@@ -113,6 +113,18 @@ add_action( 'init', 'smoothie_create_post_type' );
 */
 
 
+//  ======================================
+//  = Text domain for Multilingual theme =
+//  ======================================
+
+// when creating a translatable string use this : _e('Ma Chaine', 'smoothie');
+
+function smoothie_theme_setup(){
+    load_theme_textdomain('smoothie', get_template_directory() . '/languages');
+}
+add_action('after_setup_theme', 'smoothie_theme_setup');
+
+
 //  ===================================
 //  = Flush permalink on theme switch =
 //  ===================================
