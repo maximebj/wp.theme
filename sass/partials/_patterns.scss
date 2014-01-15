@@ -47,6 +47,10 @@ img {
 	h3 {
 		font-size:1.2em;
 	}
+
+	.no-mobile {
+		display:none;
+	}
 }
 
 
@@ -110,18 +114,18 @@ img {
 
 // some common responsive measures
 
-@include mq-max($mobile) {
+@include mq-min-max($screen, $largescreen) {
 	body {
-		//font-size:14px; // all texts are smaller
+		//font-size: 16px; // all texts are smaller
 	}
 
 	.col {
-		// padding:$col-padding/2; // less padding on cols
+		// padding: $col-padding/2; // less padding on cols
 	}
 
 	.wrapper {
-		//padding-left:$site-padding/2; // padding on sides is smaller on mobile
-		//padding-right:$site-padding/2;
+		//padding-left: $site-padding *.5; // padding on sides is smaller on mobile
+		//padding-right: $site-padding *.5;
 	}
 }
 

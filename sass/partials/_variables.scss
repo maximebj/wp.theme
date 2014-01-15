@@ -5,8 +5,8 @@
 // Base structure
 
 $site-padding: 10%;
-$col-padding: 20px;
-$site-max-width: 1600px;
+$col-padding: 40px;
+$site-max-width: 1800px;
 
 
 // Branding colors
@@ -28,7 +28,7 @@ $light: #fff;
 
 // Base vars
 
-$font-size: 16px;
+$font-size: 18px;
 $background-color: #fff;
 $font: 'Helvetica Neue', Arial, sans-serif;
 $transition-speed: .2s;
@@ -37,6 +37,8 @@ $radius: 2px;
 
 // Responsive
 
+$largescreen: 1280px;
+$screen: 1024px;
 $tablet: 768px;
 $mobile: 480px;
 
