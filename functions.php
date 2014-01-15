@@ -26,7 +26,6 @@ add_action('get_header', 'smoothie_maintenance_mode');
 //  = Thumbnails =
 //  ==============
 
-// responsive : 960 to 1140 : pictures sizes x 1,1875
 add_theme_support('post-thumbnails');
 set_post_thumbnail_size( 380, 230, true );
 add_image_size( 'slider', 540, 350, true );
@@ -258,3 +257,14 @@ add_action('admin_menu','smoothie_hide_wp_update_nag');
 */
 
 
+//  ====================================
+//  = Allow other mime types on upload =
+//  ====================================
+
+/*
+function smoothie_mime_types( $mimes ){
+	$mimes['svg'] = 'image/svg+xml';
+	return $mimes;
+}
+add_filter( 'upload_mimes', 'smoothie_mime_types' );
+*/
