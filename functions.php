@@ -45,7 +45,7 @@ function add_js_scripts() {
 	wp_enqueue_script( 'libs', get_template_directory_uri().'/js/libs.js', array('jquery'), '1.0', true );
 	wp_enqueue_script( 'script', get_template_directory_uri().'/js/script.js', array('jquery'), '1.0', true );
 }
-if (!is_admin()) add_action('wp_enqueue_scripts', 'add_js_scripts');
+add_action('wp_enqueue_scripts', 'add_js_scripts');
 
 
 //  =========
