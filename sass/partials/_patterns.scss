@@ -65,9 +65,16 @@ img {
 	max-width: $site-max-width;
 }
 
+// section : large block with a wrapper inside
+
+.section {
+	padding: $col-padding*2 0;
+}
+
 // clear for parent with floating children
 .wrapper,
-.row {
+.row,
+.section {
   @include pie-clearfix();
 }
 

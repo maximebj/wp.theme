@@ -432,94 +432,100 @@ p {
   max-width: 1800px; }
 
 /* line 70, ../sass/partials/_patterns.scss */
+.section {
+  padding: 80px 0; }
+
+/* line 77, ../sass/partials/_patterns.scss */
 .wrapper,
-.row {
+.row,
+.section {
   *zoom: 1; }
   /* line 38, ../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
   .wrapper:after,
-  .row:after {
+  .row:after,
+  .section:after {
     content: "";
     display: table;
     clear: both; }
 
-/* line 75, ../sass/partials/_patterns.scss */
+/* line 82, ../sass/partials/_patterns.scss */
 .col {
   float: left;
   padding: 40px; }
-  /* line 81, ../sass/partials/_patterns.scss */
+  /* line 88, ../sass/partials/_patterns.scss */
   .col *:last-child {
     margin-bottom: 0; }
 
-/* line 87, ../sass/partials/_patterns.scss */
+/* line 94, ../sass/partials/_patterns.scss */
 .c1-1 {
   width: 100%; }
 
-/* line 88, ../sass/partials/_patterns.scss */
+/* line 95, ../sass/partials/_patterns.scss */
 .c1-3 {
   width: 33.33333333%; }
 
-/* line 89, ../sass/partials/_patterns.scss */
+/* line 96, ../sass/partials/_patterns.scss */
 .c2-3 {
   width: 66.66666666%; }
 
-/* line 90, ../sass/partials/_patterns.scss */
+/* line 97, ../sass/partials/_patterns.scss */
 .c1-2 {
   width: 50%; }
 
-/* line 91, ../sass/partials/_patterns.scss */
+/* line 98, ../sass/partials/_patterns.scss */
 .c1-4 {
   width: 25%; }
 
-/* line 92, ../sass/partials/_patterns.scss */
+/* line 99, ../sass/partials/_patterns.scss */
 .c3-4 {
   width: 75%; }
 
-/* line 93, ../sass/partials/_patterns.scss */
+/* line 100, ../sass/partials/_patterns.scss */
 .c1-5 {
   width: 20%; }
 
-/* line 94, ../sass/partials/_patterns.scss */
+/* line 101, ../sass/partials/_patterns.scss */
 .c2-5 {
   width: 40%; }
 
-/* line 95, ../sass/partials/_patterns.scss */
+/* line 102, ../sass/partials/_patterns.scss */
 .c3-5 {
   width: 60%; }
 
-/* line 96, ../sass/partials/_patterns.scss */
+/* line 103, ../sass/partials/_patterns.scss */
 .c4-5 {
   width: 80%; }
 
-/* line 105, ../sass/partials/_patterns.scss */
+/* line 112, ../sass/partials/_patterns.scss */
 .repeatable .c1-2:nth-child(2n+1),
 .repeatable .c1-3:nth-child(3n+1),
 .repeatable .c1-4:nth-child(4n+1),
 .repeatable .c1-5:nth-child(5n+1) {
   clear: both; }
 
-/* line 111, ../sass/partials/_patterns.scss */
+/* line 118, ../sass/partials/_patterns.scss */
 .first {
   clear: both; }
 
 @media screen and (max-width: 480px) {
-  /* line 137, ../sass/partials/_patterns.scss */
+  /* line 144, ../sass/partials/_patterns.scss */
   .c1-2,
   .c1-3, .c2-3,
   .c1-4, .c3-4,
   .c1-5, .c2-5, .c3-5, .c4-5 {
     width: 100%;
     padding: 0 0 40px 0; } }
-/* line 150, ../sass/partials/_patterns.scss */
+/* line 157, ../sass/partials/_patterns.scss */
 img {
   max-width: 100%;
   height: auto;
   width: auto; }
 
-/* line 158, ../sass/partials/_patterns.scss */
+/* line 165, ../sass/partials/_patterns.scss */
 #map img {
   max-width: inherit; }
 
-/* line 167, ../sass/partials/_patterns.scss */
+/* line 174, ../sass/partials/_patterns.scss */
 div,
 article,
 a,
@@ -529,10 +535,10 @@ img {
   box-sizing: border-box; }
 
 @media screen and (max-width: 480px) {
-  /* line 173, ../sass/partials/_patterns.scss */
+  /* line 180, ../sass/partials/_patterns.scss */
   .no-mobile {
     display: none; } }
-/* line 183, ../sass/partials/_patterns.scss */
+/* line 190, ../sass/partials/_patterns.scss */
 a {
   color: #0088cc;
   text-decoration: none;
@@ -540,16 +546,16 @@ a {
   -moz-transition: color 0.2s ease-in-out;
   -o-transition: color 0.2s ease-in-out;
   transition: color 0.2s ease-in-out; }
-  /* line 188, ../sass/partials/_patterns.scss */
+  /* line 195, ../sass/partials/_patterns.scss */
   a:hover {
     color: #ff9933; }
 
-/* line 196, ../sass/partials/_patterns.scss */
+/* line 203, ../sass/partials/_patterns.scss */
 .button, input[type=submit], a[rel*=attachment] {
   display: inline-block; }
 
 /* TODO : improve for responsive menu */
-/* line 276, ../sass/partials/_patterns.scss */
+/* line 283, ../sass/partials/_patterns.scss */
 input[type=text],
 input[type=email],
 input[type=password],
@@ -559,71 +565,71 @@ textarea {
   box-sizing: border-box;
   outline: none; }
 
-/* line 291, ../sass/partials/_patterns.scss */
+/* line 298, ../sass/partials/_patterns.scss */
 .post-content a {
   color: #0088cc; }
-  /* line 293, ../sass/partials/_patterns.scss */
+  /* line 300, ../sass/partials/_patterns.scss */
   .post-content a:hover {
     color: #ff9933; }
-/* line 299, ../sass/partials/_patterns.scss */
+/* line 306, ../sass/partials/_patterns.scss */
 .post-content ul {
   list-style-type: circle; }
-/* line 300, ../sass/partials/_patterns.scss */
+/* line 307, ../sass/partials/_patterns.scss */
 .post-content ol {
   list-style-type: decimal; }
-/* line 301, ../sass/partials/_patterns.scss */
+/* line 308, ../sass/partials/_patterns.scss */
 .post-content li {
   margin-left: 2em; }
-/* line 305, ../sass/partials/_patterns.scss */
+/* line 312, ../sass/partials/_patterns.scss */
 .post-content .twitter-tweet {
   width: 100%; }
-/* line 309, ../sass/partials/_patterns.scss */
+/* line 316, ../sass/partials/_patterns.scss */
 .post-content iframe {
   width: 100% !important; }
-/* line 315, ../sass/partials/_patterns.scss */
+/* line 322, ../sass/partials/_patterns.scss */
 .post-content .alignright {
   float: right;
   margin: 1em 0 1em 1em; }
-/* line 320, ../sass/partials/_patterns.scss */
+/* line 327, ../sass/partials/_patterns.scss */
 .post-content .alignleft {
   float: left;
   margin: 1em 1em 1em 0; }
-/* line 325, ../sass/partials/_patterns.scss */
+/* line 332, ../sass/partials/_patterns.scss */
 .post-content .wp-caption {
   text-align: center;
   padding: .5em;
   width: auto !important; }
-  /* line 330, ../sass/partials/_patterns.scss */
+  /* line 337, ../sass/partials/_patterns.scss */
   .post-content .wp-caption p {
     margin: 0;
     font-size: .7em; }
-/* line 339, ../sass/partials/_patterns.scss */
+/* line 346, ../sass/partials/_patterns.scss */
 .post-content .gallery br {
   clear: none !important;
   display: none; }
-/* line 342, ../sass/partials/_patterns.scss */
+/* line 349, ../sass/partials/_patterns.scss */
 .post-content .gallery-columns-1 .gallery-item {
   width: 100%; }
-/* line 343, ../sass/partials/_patterns.scss */
+/* line 350, ../sass/partials/_patterns.scss */
 .post-content .gallery-columns-2 .gallery-item {
   width: 50%; }
-/* line 344, ../sass/partials/_patterns.scss */
+/* line 351, ../sass/partials/_patterns.scss */
 .post-content .gallery-columns-3 .gallery-item {
   width: 33.33333333%; }
-/* line 345, ../sass/partials/_patterns.scss */
+/* line 352, ../sass/partials/_patterns.scss */
 .post-content .gallery-columns-4 .gallery-item {
   width: 25%; }
-/* line 346, ../sass/partials/_patterns.scss */
+/* line 353, ../sass/partials/_patterns.scss */
 .post-content .gallery-columns-5 .gallery-item {
   width: 20%; }
-/* line 347, ../sass/partials/_patterns.scss */
+/* line 354, ../sass/partials/_patterns.scss */
 .post-content .gallery-columns-6 .gallery-item {
   width: 16.66666667%; }
-/* line 349, ../sass/partials/_patterns.scss */
+/* line 356, ../sass/partials/_patterns.scss */
 .post-content .gallery-item {
   display: block;
   text-align: center;
   margin-bottom: 20px; }
-  /* line 354, ../sass/partials/_patterns.scss */
+  /* line 361, ../sass/partials/_patterns.scss */
   .post-content .gallery-item img {
     display: block; }
