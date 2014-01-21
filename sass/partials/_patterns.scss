@@ -160,6 +160,12 @@ img {
 	width: auto; // avoid ie8 bug
 }
 
+// fluid iframes
+
+iframe {
+	max-width: 100%;
+}
+
 // Fix for Google Maps UI
 #map {
 	img {
@@ -311,10 +317,6 @@ textarea {
 
 	.twitter-tweet {
 		width: 100%;
-	}
-
-	iframe {
-		width: 100% !important;
 	}
 
  	// Images alignment
