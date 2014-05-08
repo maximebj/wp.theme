@@ -98,7 +98,8 @@ function smoothie_create_post_type() {
 		'labels' => $labels,
 		'public' => true,
 		'has_archive' => true,
-		'supports' => array('title', 'editor','thumbnail')
+		'supports' => array('title', 'editor','thumbnail'),
+		'menu_position' => 5
 	);
 
 	register_post_type('####',$args);

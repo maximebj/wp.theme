@@ -157,7 +157,6 @@ img {
 img {
 	max-width: 100%;
 	height: auto;
-	width: auto; // avoid ie8 bug
 }
 
 // fluid iframes
@@ -178,7 +177,10 @@ iframe {
 div,
 article,
 a,
-img {
+img,
+input,
+textarea
+{
 	@include box-sizing(border-box);
 }
 
