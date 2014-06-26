@@ -1,0 +1,136 @@
+//  ====================
+//  = Column structure =
+//  ====================
+
+// default page wrapper
+.wrapper {
+	margin: 0 auto;
+	padding: 0 $site-padding;
+	max-width: $site-max-width;
+}
+
+// section : large block with a wrapper inside
+
+.section {
+	padding: $col-padding*2 0;
+}
+
+// clear for parent with floating children
+.wrapper,
+.row,
+.section {
+  @include pie-clearfix();
+}
+
+// mandatory class for each column div
+.col {
+	float: left;
+	padding: $col-padding;
+
+	// no margin for the last element inside column
+	*:last-child
+	{
+		margin-bottom: 0;
+	}
+}
+
+// columns sizes
+.c1-1 { width: 100%; }
+.c1-3 { width: 33.33333333%; }
+.c2-3 { width: 66.66666666%; }
+.c1-2 { width: 50%; }
+.c1-4 { width: 25%; }
+.c3-4 { width: 75%; }
+.c1-5 { width: 20%; }
+.c2-5 { width: 40%; }
+.c3-5 { width: 60%; }
+.c4-5 { width: 80%; }
+
+
+// clears for multilines cols
+.repeatable {
+	.c1-2:nth-child(2n+1),
+	.c1-3:nth-child(3n+1),
+	.c1-4:nth-child(4n+1),
+	.c1-5:nth-child(5n+1)
+	{
+		clear: both;
+	}
+}
+
+// manually clear first block of a line
+.first {
+  clear: both;
+}
+
+// some common responsive measures
+
+@include mq-min-max($screen, $largescreen) {
+	body {
+		//font-size: 16px; // all texts are smaller
+	}
+
+	.col {
+		// padding: $col-padding/2; // less padding on cols
+	}
+
+	.wrapper {
+		//padding-left: $site-padding *.5; // padding on sides is smaller on mobile
+		//padding-right: $site-padding *.5;
+	}
+}
+
+@include mq-max ($mobile) {
+	.c1-2,
+	.c1-3, .c2-3,
+	.c1-4, .c3-4,
+	.c1-5, .c2-5, .c3-5, .c4-5
+	{
+		width: 100%;
+		padding:0 0 $col-padding 0;
+	}
+}
+
+
+//  =====================
+//  = Responsive basics =
+//  =====================
+
+
+// fluid images
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+// fluid iframes
+
+iframe {
+	max-width: 100%;
+}
+
+// Fix for Google Maps UI
+.map,
+#map {
+	img {
+		max-width: inherit;
+	}
+}
+
+// Box sizing : border box
+div,
+article,
+a,
+img,
+input,
+textarea
+{
+	@include box-sizing(border-box);
+}
+
+// something to hide in mobile
+@include mq-max ($mobile) {
+	.no-mobile {
+		display:none;
+	}
+}

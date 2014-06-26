@@ -22,8 +22,10 @@ $brand-contrast-hover: #000;
 $text-color: #202020;
 $link-color: #08C;
 $hover-color: #F93;
+
 $dark : #000;
-$light: #fff;
+$bright: #fff;
+$neutral: #ccc;
 
 
 // Base vars
@@ -33,6 +35,12 @@ $background-color: #fff;
 $font: 'Helvetica Neue', Arial, sans-serif;
 $transition-speed: .2s;
 $radius: 2px;
+$border-thickness : 2px;
+
+
+// Spaces
+
+$space: 60px;
 
 
 // Responsive
