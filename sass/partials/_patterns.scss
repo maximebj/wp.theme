@@ -192,6 +192,52 @@ textarea
 }
 
 
+//  ==========
+//  = Titles =
+//  ==========
+
+.title--main {
+
+}
+
+.title--contrast {
+
+}
+
+//  =========
+//  = Texts =
+//  =========
+
+.text--contrast {
+
+}
+
+.text--brand {
+
+}
+
+.text--alt {
+
+}
+
+
+//  =================
+//  = Common styles =
+//  =================
+
+.no-ma {
+	margin: 0;
+}
+
+.ma-t {
+	margin-top: $col-padding;
+}
+
+.radius {
+	border-radius: $radius;
+}
+
+
 //  =========
 //  = Links =
 //  =========
@@ -215,6 +261,26 @@ a {
 	&:hover {
 
 	}
+
+	&:focus {
+		outline: 0;
+	}
+}
+
+.button--brand {
+
+}
+
+.button--alt {
+
+}
+
+.button--big {
+	font-size: 1.5em;
+}
+
+.button--full-width {
+	width: 100%;
 }
 
 

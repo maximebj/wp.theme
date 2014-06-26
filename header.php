@@ -23,7 +23,7 @@
   <div class="wrapper">
 
     <header class="header">
-      <a href="<?php echo home_url('/'); ?>"></a>
+      <a href="<?php echo home_url('/'); ?>"></a> <?php _e('Hello there !', 'smoothie'); ?>
     </header>
 
     <?php wp_nav_menu( array('theme_location' => 'main-menu', 'container' => false, 'menu_class' => 'menu',  )); ?>

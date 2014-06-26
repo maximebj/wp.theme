@@ -39,8 +39,8 @@ function add_js_scripts() {
 
 	wp_enqueue_script( 'modernizr', get_template_directory_uri().'/js/libs/modernizr-2.7.1.min.js', false, '2.7.1', false);
 
-	wp_deregister_script( 'jquery' );
-	wp_enqueue_script( 'jquery', '//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js', false, '1.9.0', true);
+	// wp_deregister_script( 'jquery' );
+	// wp_enqueue_script( 'jquery', '//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js', false, '1.10.2', true);
 
 	wp_enqueue_script( 'libs', get_template_directory_uri().'/js/libs.js', array('jquery'), '1.0', true );
 	wp_enqueue_script( 'script', get_template_directory_uri().'/js/script.js', array('jquery'), '1.0', true );
@@ -99,7 +99,8 @@ function smoothie_create_post_type() {
 		'public' => true,
 		'has_archive' => true,
 		'supports' => array('title', 'editor','thumbnail'),
-		'menu_position' => 5
+		'menu_position' => 5,
+		'menu_icon' => 'dashicons-portfolio',
 	);
 
 	register_post_type('####',$args);
@@ -281,3 +282,12 @@ function smoothie_mime_types( $mimes ){
 }
 add_filter( 'upload_mimes', 'smoothie_mime_types' );
 */
+
+//  ========================
+//  = Changing footer text =
+//  ========================
+
+function smoothie_change_footer() {
+	echo "Crée par <a href='http://www.smoothie-creative.com/' target='_blank'>Smoothie Creative</a>, propulsé par <a href='http://wordpress.org' target='_blank'>WordPress</a>";
+}
+add_filter('admin_footer_text', 'smoothie_change_footer')

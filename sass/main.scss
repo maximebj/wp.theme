@@ -1,8 +1,5 @@
 @import "compass";
 
-// Legacy
-@import "partials/legacy";
-
 // Fonts
 @import "partials/fonts";
 
@@ -17,7 +14,9 @@
 // Styled patterns and elements
 @import "partials/patterns";
 
-// Grid system and page structure
+// Page structures
 @import "partials/layout";
+
+// Pages styles
 
 // libs
