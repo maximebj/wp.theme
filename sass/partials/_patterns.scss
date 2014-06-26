@@ -8,6 +8,9 @@ body {
 	line-height: 1.4;
 	font-family: $font;
 	color: $text-color;
+
+	@include mq-min-max($screen, $largescreen) {}
+	@include mq-max($mobile) {}
 }
 
 h1 {
@@ -31,24 +34,6 @@ p {
 
 img {
 
-}
-
-@include mq-max($mobile) {
-	h1 {
-		font-size:1.6em;
-	}
-
-	h2 {
-		font-size:1.4em;
-	}
-
-	h3 {
-		font-size:1.2em;
-	}
-
-	.no-mobile {
-		display:none;
-	}
 }
 
 
