@@ -1,0 +1,227 @@
+//  =============
+//  = Variables =
+//  =============
+
+// Base structure
+
+site-padding = 10%
+col-padding = 30px
+space= 50px
+site-max-width= 1800px
+footer-height= 192px
+
+// Colors
+
+color-1= #60C8D1
+color-1-bright= #8FD9DB
+
+color-2= #f3643c
+
+color-3= #44596E
+
+txt-color= #202020
+link-color= #08C
+hover-color= #F93
+
+neutral= #f8f8f8
+bright= #fff
+dark= #000
+
+// Fonts
+
+font-size= 16px
+title-font= "brandon-grotesque"
+font= "proxima-nova"
+
+// Styles
+
+transition-speed= .2s
+radius= 8px
+border-thickness = 1px
+shadow= 0 1px rgba(0,0,0,.1)
+
+
+//  ============
+//  = Patterns =
+//  ============
+
+html
+  position relative
+  box-sizing border-box
+  min-height 100%
+
+  padding-bottom footer-height
+
+
+body
+	background-color neutral
+	font-size font-size
+	line-height 1.4
+	font-family font
+	color txt-color
+	margin-top navbar-height
+	-webkit-font-smoothing antialiased
+    -moz-osx-font-smoothing grayscale
+
+h1
+	font-size 1.7em
+	line-height 1.2
+	padding 1.3em 0 0 0
+	text-transform: uppercase
+	color color-3
+	font-weight 700
+
+
+h2
+	color color-3
+	font-size 1.5em
+	text-transform: uppercase
+	margin 0
+	font-weight 300
+
+
+h3
+	color color-3
+	font-size 1.3em
+	margin 0 0 1em 0
+	text-transform uppercase
+
+
+p
+	margin 1.5em 0
+
+strong
+	font-weight bold
+
+
+
+//  =================
+//  = Common styles =
+//  =================
+
+.pull-left
+	float left
+
+.pull-right
+	float right
+
+.left
+	text-align left
+
+.right
+	text-align right
+
+.center
+	text-align center
+
+.mbt
+	margin-top space
+	margin-bottom space
+
+.mb
+	margin-bottom space
+
+.mt
+	margin-top space
+
+.pb
+	padding-bottom (space/2)
+
+.circle
+	border-radius 50%
+
+.shadow
+	box-shadow shadow
+
+.bgcolor-1
+	background-color color-1
+
+.bgcolor-2
+	background-color color-2
+
+.bgneutral
+	background-color neutral
+
+.separator
+	margin 4em 0 2em 0
+	border-bottom border-thickness dashed neutral
+
+.hidden
+	display none
+
+.big-text
+	text-align center
+	font-size 130%
+	color #333333
+	line-height 1.5
+
+
+//  ==============
+//  = Components =
+//  ==============
+
+// Common styles like labels, hero unit, standard block ...
+
+
+//  ===========
+//  = Buttons =
+//  ===========
+
+button,
+input[type=submit],
+[class^=button]
+	display inline-block
+	border-radius radius
+	padding 1em
+
+.button--main
+	background color-2
+
+	&:hover
+		transform scale(1.02)
+		background #fe582a
+
+.button--second
+	background color-1
+
+	&:hover
+		background #29d3df
+
+.button--trans
+	border border-thickness solid bright
+
+.button--big
+	font-size font-size
+
+.button--shadow
+	box-shadow shadow
+
+
+//  =========
+//  = Links =
+//  =========
+
+a
+	color color-1
+
+a,
+button,
+input[type=submit],
+[class^=button]
+	transition all transition-speed ease-in-out
+
+
+//  =========
+//  = Forms =
+//  =========
+
+input[type=text],
+input[type=email],
+input[type=date],
+input[type=number],
+input[type=password],
+textarea
+	border border-thickness solid neutral
+	font-size font-size
+	width 100%
+	margin 0
