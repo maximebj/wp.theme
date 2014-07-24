@@ -290,4 +290,4 @@ add_filter( 'upload_mimes', 'smoothie_mime_types' );
 function smoothie_change_footer() {
 	echo "Crée par <a href='http://www.smoothie-creative.com/' target='_blank'>Smoothie Creative</a>, propulsé par <a href='http://wordpress.org' target='_blank'>WordPress</a>";
 }
-add_filter('admin_footer_text', 'smoothie_change_footer')
+add_filter('admin_footer_text', 'smoothie_change_footer');
