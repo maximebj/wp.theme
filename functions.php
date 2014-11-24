@@ -26,12 +26,12 @@ set_post_thumbnail_size( 380, 230, true );
 //  = Load scripts =
 //  ================
 
-function add_js_scripts() {
+function smoothie_add_js_scripts() {
 
 	wp_enqueue_script( 'modernizr', get_template_directory_uri().'/js/modernizr-2.7.1.min.js', false, '2.7.1', false);
 	wp_enqueue_script( 'script', get_template_directory_uri().'/js/script.js', array('jquery'), '1.0', true );
 }
-add_action('wp_enqueue_scripts', 'add_js_scripts');
+add_action('wp_enqueue_scripts', 'smoothie_add_js_scripts');
 
 
 //  =========
@@ -73,7 +73,7 @@ function smoothie_create_post_type() {
 
 	$labels = array(
 		'name' => 's',
-		'all_items' => // affiché dans le sous menu
+		'all_items' => ,// affiché dans le sous menu
 		'singular_name' => '',
 		'add_new_item' => 'Ajouter un',
 		'edit_item' => 'Modifier le',
@@ -89,16 +89,64 @@ function smoothie_create_post_type() {
 		'menu_icon' => 'dashicons-portfolio',
 	);
 
-	register_post_type('####',$args);
+	register_post_type('#1#',$args);
 
 	// taxonomy
-	$labels = array('name' => '####');
-	register_taxonomy( '####', '####', array( 'hierarchical' => true, 'public' => true, 'labels' => $labels, 'query_var' => true ));
+	$labels = array('name' => '#2#');
+	register_taxonomy( '#2#', '#1#', array( 'hierarchical' => true, 'public' => true, 'labels' => $labels, 'query_var' => true ));
 
 }
 add_action( 'init', 'smoothie_create_post_type' );
 
 */
+
+
+//  =================================
+//  = Admin meta boxes optimization =
+//  =================================
+
+function smoothie_hidden_meta_boxes($hidden, $screen) {
+	if ( 'post' == $screen->base || 'page' == $screen->base ):
+		$hidden = array('slugdiv', 'trackbacksdiv', 'commentstatusdiv', 'postcustom', 'commentsdiv', 'authordiv', 'revisionsdiv');
+		// showed : postexcerpt
+	endif;
+	return $hidden;
+}
+add_filter('default_hidden_meta_boxes', 'smoothie_hidden_meta_boxes', 10, 2);
+
+
+//  ================================
+//  = Display tiny MCE second line =
+//  ================================
+
+function smoothie_enhance_editor($in) {
+
+	$in['wordpress_adv_hidden'] = FALSE;
+
+	return $in;
+}
+add_filter('tiny_mce_before_init', 'smoothie_enhance_editor');
+
+
+//  =========================
+//  = The Yoast big cleanup =
+//  =========================
+
+// // remove yoast columns in admin table
+// function clean_posts_column( $columns ) {
+//     unset($columns['wpseo-title']);
+//     unset($columns['wpseo-score']);
+//     unset($columns['wpseo-metadesc']);
+//     unset($columns['wpseo-focuskw']);
+//     return $columns;
+// }
+// add_filter( 'manage_edit-post_columns', 'clean_posts_column', 10, 1 );
+
+// // Move Yoast metabox to bottom
+// function yoast_bottom() {
+// 	return 'low';
+// }
+// add_filter( 'wpseo_metabox_prio', 'yoast_bottom');
 
 
 //  ======================================
