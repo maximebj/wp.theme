@@ -262,12 +262,56 @@ add_filter( 'use_default_gallery_style', '__return_false' );
 add_filter( 'sanitize_file_name', 'remove_accents' );
 
 
+//  ================================
+//  = Admin Clean and improvements =
+//  ================================
+
+
+// remove welcome panel and metaboxes
+remove_action('welcome_panel', 'wp_welcome_panel');
+
+function my_remove_meta_boxes() {
+	remove_meta_box('dashboard_primary', 'dashboard', 'normal');
+}
+add_action( 'admin_menu', 'my_remove_meta_boxes' );
+
+// Add meta box with Smoothie Datas
+function smoothie_dashboard_widget_function( $post, $callback_args ) {
+	echo "<p>Votre site est géré par l'agence <strong>Smoothie Creative</strong>.</p>";
+
+	echo '<p style="text-align: center"><a href="http://smoothie-creative.com"><img src="'.get_bloginfo('template_url').'/img/smoothie.png" style="width:150px"></a></p>';
+
+	echo "<p><strong>Nous contacter :</strong>";
+	echo "<p>Maxime BERNARD-JACQUET<br>";
+	echo "06 74 14 03 49<br>";
+	echo '<a href="mailto:contact@smoothie-creative.com">contact@smoothie-creative.com</a>';
+}
+
+function smoothie_add_dashboard_widget() {
+	wp_add_dashboard_widget('smoothie_dashboard_widget', 'Smoothie Creative', 'smoothie_dashboard_widget_function');
+
+ 	global $wp_meta_boxes;
+ 	$normal_dashboard = $wp_meta_boxes['dashboard']['normal']['core'];
+ 	$example_widget_backup = array( 'smoothie_dashboard_widget' => $normal_dashboard['smoothie_dashboard_widget'] );
+ 	unset( $normal_dashboard['smoothie_dashboard_widget'] );
+ 	$sorted_dashboard = array_merge( $example_widget_backup, $normal_dashboard );
+ 	$wp_meta_boxes['dashboard']['normal']['core'] = $sorted_dashboard;
+}
+add_action('wp_dashboard_setup', 'smoothie_add_dashboard_widget', 1 );
+
+
+function mytheme_admin_bar_render() {
+	global $wp_admin_bar;
+	$wp_admin_bar->remove_menu('wpseo-menu');
+}
+add_action( 'wp_before_admin_bar_render', 'mytheme_admin_bar_render' );
+
+
 //  ======================================
 //  = Remove menu entries from Dashboard =
 //  ======================================
 
 /*
-
 function smoothie_remove_menu_pages() {
 	remove_menu_page('tools.php');
 	remove_menu_page('edit-comments.php');
