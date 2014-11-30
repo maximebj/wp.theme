@@ -27,7 +27,7 @@
 
 	<h1><?php echo $title; ?></h1>
 
-	<div id="blog">
+	<div class="blog">
 
 <?php
 	if ( have_posts() ) : while ( have_posts() ) : the_post();
@@ -40,9 +40,9 @@
 
 	</div>
 
-	<aside id="sidebar">
+	<div class="sidebar">
 		<?php //dynamic_sidebar('Blog'); ?>
-	</aside>
+	</div>
 
 <?php
 	get_footer();
