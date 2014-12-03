@@ -132,21 +132,21 @@ add_filter('tiny_mce_before_init', 'smoothie_enhance_editor');
 //  = The Yoast big cleanup =
 //  =========================
 
-// // remove yoast columns in admin table
-// function clean_posts_column( $columns ) {
-//     unset($columns['wpseo-title']);
-//     unset($columns['wpseo-score']);
-//     unset($columns['wpseo-metadesc']);
-//     unset($columns['wpseo-focuskw']);
-//     return $columns;
-// }
-// add_filter( 'manage_edit-post_columns', 'clean_posts_column', 10, 1 );
+// remove yoast columns in admin table
+function smoothie_clean_posts_column( $columns ) {
+    unset($columns['wpseo-title']);
+    unset($columns['wpseo-score']);
+    unset($columns['wpseo-metadesc']);
+    unset($columns['wpseo-focuskw']);
+    return $columns;
+}
+add_filter( 'manage_edit-post_columns', 'smoothie_clean_posts_column', 10, 1 );
 
-// // Move Yoast metabox to bottom
-// function yoast_bottom() {
-// 	return 'low';
-// }
-// add_filter( 'wpseo_metabox_prio', 'yoast_bottom');
+// Move Yoast metabox to bottom
+function smoothie_yoast_bottom() {
+	return 'low';
+}
+add_filter( 'wpseo_metabox_prio', 'smoothie_yoast_bottom');
 
 
 //  ======================================
@@ -270,10 +270,10 @@ add_filter( 'sanitize_file_name', 'remove_accents' );
 // remove welcome panel and metaboxes
 remove_action('welcome_panel', 'wp_welcome_panel');
 
-function my_remove_meta_boxes() {
+function smoothie_remove_meta_boxes() {
 	remove_meta_box('dashboard_primary', 'dashboard', 'normal');
 }
-add_action( 'admin_menu', 'my_remove_meta_boxes' );
+add_action( 'admin_menu', 'smoothie_remove_meta_boxes' );
 
 // Add meta box with Smoothie Datas
 function smoothie_dashboard_widget_function( $post, $callback_args ) {
@@ -300,11 +300,11 @@ function smoothie_add_dashboard_widget() {
 add_action('wp_dashboard_setup', 'smoothie_add_dashboard_widget', 1 );
 
 
-function mytheme_admin_bar_render() {
+function smoothie_admin_bar_render() {
 	global $wp_admin_bar;
 	$wp_admin_bar->remove_menu('wpseo-menu');
 }
-add_action( 'wp_before_admin_bar_render', 'mytheme_admin_bar_render' );
+add_action( 'wp_before_admin_bar_render', 'smoothie_admin_bar_render' );
 
 
 //  ======================================
