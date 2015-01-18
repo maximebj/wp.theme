@@ -12,7 +12,7 @@
     <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body>
     <div class="header">
         <div class="wrapper">
             <a href="<?php echo home_url('/'); ?>"></a> <?php _e('Hello there !', 'smoothie'); ?>

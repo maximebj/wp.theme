@@ -6,9 +6,7 @@ html
   position relative
   box-sizing border-box
   min-height 100%
-
   padding-bottom footer-height
-
 
 body
 	background-color neutral
@@ -28,7 +26,6 @@ h1
 	color color-3
 	font-weight 700
 
-
 h2
 	color color-3
 	font-size 1.5em
@@ -36,13 +33,11 @@ h2
 	margin 0
 	font-weight 300
 
-
 h3
 	color color-3
 	font-size 1.3em
 	margin 0 0 1em 0
 	text-transform uppercase
-
 
 p
 	margin 1.5em 0
@@ -82,7 +77,10 @@ strong
 	margin-top space
 
 .pb
-	padding-bottom (space/2)
+	padding-bottom minispace
+
+.pt
+	padding-top minispace
 
 .circle
 	border-radius 50%
@@ -90,34 +88,42 @@ strong
 .shadow
 	box-shadow shadow
 
-.bgcolor-1
-	background-color color-1
-
-.bgcolor-2
-	background-color color-2
-
-.bgneutral
-	background-color neutral
-
-.separator
-	margin 4em 0 2em 0
-	border-bottom border-thickness dashed neutral
-
 .hidden
 	display none
+
+
+
+//  ===========
+//  = Borders =
+//  ===========
+
+hr, 
+.separator
+    border none
+    border-bottom border
+
+.separator--tiny
+    width 100px
+    border-bottom 1px solid neutral
+    margin 30px auto
+    
+
+//  =====================
+//  = Big Centered Text =
+//  =====================
 
 .big-text
 	text-align center
 	font-size 130%
-	color #333333
 	line-height 1.5
 
 
-//  ==============
-//  = Components =
-//  ==============
+// labels
+// TODO
 
-// Common styles like labels, hero unit, standard block ...
+
+// Hero unit
+// TODO
 
 
 //  ===========

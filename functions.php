@@ -262,20 +262,75 @@ add_filter( 'use_default_gallery_style', '__return_false' );
 add_filter( 'sanitize_file_name', 'remove_accents' );
 
 
-//  ================================
-//  = Admin Clean and improvements =
-//  ================================
+//  ==================================
+//  = Remove Dashboard welcome panel =
+//  ==================================
 
-
-// remove welcome panel and metaboxes
 remove_action('welcome_panel', 'wp_welcome_panel');
+
+
+//  ====================
+//  = Remove Metaboxes =
+//  ====================
 
 function smoothie_remove_meta_boxes() {
 	remove_meta_box('dashboard_primary', 'dashboard', 'normal');
 }
 add_action( 'admin_menu', 'smoothie_remove_meta_boxes' );
 
-// Add meta box with Smoothie Datas
+
+//  ========================
+//  = Remove Yoast columns =
+//  ========================
+
+function smoothie_clean_posts_column( $columns ) {
+    unset($columns['wpseo-title']);
+    unset($columns['wpseo-score']);
+    unset($columns['wpseo-metadesc']);
+    unset($columns['wpseo-focuskw']);
+    return $columns;
+}
+add_filter( 'manage_edit-post_columns', 'smoothie_clean_posts_column', 10, 1 );
+
+
+//  ==================================
+//  = Put Yoast post block to bottom =
+//  ==================================
+
+function smoothie_yoast_bottom() {
+	return 'low';
+}
+add_filter( 'wpseo_metabox_prio', 'smoothie_yoast_bottom');
+
+
+//  =============================
+//  = Remove Yoast on admin bar =
+//  =============================
+
+function smoothie_admin_bar_render() {
+	global $wp_admin_bar;
+	$wp_admin_bar->remove_menu('wpseo-menu');
+}
+add_action( 'wp_before_admin_bar_render', 'smoothie_admin_bar_render' );
+
+
+//  =================================
+//  = Force second line on Tiny MCE =
+//  =================================
+
+function smoothie_enhance_editor($in) {
+
+	$in['wordpress_adv_hidden'] = FALSE;
+
+	return $in;
+}
+add_filter('tiny_mce_before_init', 'smoothie_enhance_editor');
+
+
+//  ===========================
+//  = Create Smoothie Metabox =
+//  ===========================
+
 function smoothie_dashboard_widget_function( $post, $callback_args ) {
 	echo "<p>Votre site est géré par l'agence <strong>Smoothie Creative</strong>.</p>";
 
@@ -298,13 +353,6 @@ function smoothie_add_dashboard_widget() {
  	$wp_meta_boxes['dashboard']['normal']['core'] = $sorted_dashboard;
 }
 add_action('wp_dashboard_setup', 'smoothie_add_dashboard_widget', 1 );
-
-
-function smoothie_admin_bar_render() {
-	global $wp_admin_bar;
-	$wp_admin_bar->remove_menu('wpseo-menu');
-}
-add_action( 'wp_before_admin_bar_render', 'smoothie_admin_bar_render' );
 
 
 //  ======================================
