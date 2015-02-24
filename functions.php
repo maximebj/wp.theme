@@ -101,54 +101,6 @@ add_action( 'init', 'smoothie_create_post_type' );
 */
 
 
-//  =================================
-//  = Admin meta boxes optimization =
-//  =================================
-
-function smoothie_hidden_meta_boxes($hidden, $screen) {
-	if ( 'post' == $screen->base || 'page' == $screen->base ):
-		$hidden = array('slugdiv', 'trackbacksdiv', 'commentstatusdiv', 'postcustom', 'commentsdiv', 'authordiv', 'revisionsdiv');
-		// showed : postexcerpt
-	endif;
-	return $hidden;
-}
-add_filter('default_hidden_meta_boxes', 'smoothie_hidden_meta_boxes', 10, 2);
-
-
-//  ================================
-//  = Display tiny MCE second line =
-//  ================================
-
-function smoothie_enhance_editor($in) {
-
-	$in['wordpress_adv_hidden'] = FALSE;
-
-	return $in;
-}
-add_filter('tiny_mce_before_init', 'smoothie_enhance_editor');
-
-
-//  =========================
-//  = The Yoast big cleanup =
-//  =========================
-
-// remove yoast columns in admin table
-function smoothie_clean_posts_column( $columns ) {
-    unset($columns['wpseo-title']);
-    unset($columns['wpseo-score']);
-    unset($columns['wpseo-metadesc']);
-    unset($columns['wpseo-focuskw']);
-    return $columns;
-}
-add_filter( 'manage_edit-post_columns', 'smoothie_clean_posts_column', 10, 1 );
-
-// Move Yoast metabox to bottom
-function smoothie_yoast_bottom() {
-	return 'low';
-}
-add_filter( 'wpseo_metabox_prio', 'smoothie_yoast_bottom');
-
-
 //  ======================================
 //  = Text domain for Multilingual theme =
 //  ======================================
@@ -176,10 +128,10 @@ add_action( 'after_switch_theme', 'smoothie_rewrite_flush' );
 //  ==============
 
 /* shortcode : mailto:<?php echo do_shotcode('[mail address="me@mail.com"]'); ?> */
-function secure_mail( $atts ){
+function smoothie_secure_mail( $atts ){
  return antispambot($atts['address']);
 }
-add_shortcode( 'mail', 'secure_mail' );
+add_shortcode( 'mail', 'smoothie_secure_mail' );
 
 
 //  ===========
@@ -201,6 +153,10 @@ add_filter('excerpt_more', 'new_excerpt_more');
 */
 
 
+
+/* ---------------------------------   ADMIN Functions   ------------------------------ */
+
+
 //  =================
 //  = Editor styles =
 //  =================
@@ -217,7 +173,7 @@ add_action( 'init', 'smoothie_theme_add_editor_styles' );
 
 function smoothie_custom_tinymce($init) {
 
-	$init['block_formats'] = 'Paragraph=p;Heading 2=h2;Heading 3=h3;Heading 4=h4';
+	$init['block_formats'] = 'Paragraphe=p;Titre 2=h2;Titre 3=h3;Titre 4=h4';
 	return $init;
 
 }
@@ -267,6 +223,20 @@ add_filter( 'sanitize_file_name', 'remove_accents' );
 //  ==================================
 
 remove_action('welcome_panel', 'wp_welcome_panel');
+
+
+//  =================================
+//  = Admin meta boxes optimization =
+//  =================================
+
+// function smoothie_hidden_meta_boxes($hidden, $screen) {
+// 	if ( 'post' == $screen->base || 'page' == $screen->base ):
+// 		$hidden = array('slugdiv', 'trackbacksdiv', 'commentstatusdiv', 'postcustom', 'commentsdiv', 'authordiv', 'revisionsdiv');
+// 		// showed : postexcerpt
+// 	endif;
+// 	return $hidden;
+// }
+// add_filter('default_hidden_meta_boxes', 'smoothie_hidden_meta_boxes', 10, 2);
 
 
 //  ====================
@@ -344,13 +314,6 @@ function smoothie_dashboard_widget_function( $post, $callback_args ) {
 
 function smoothie_add_dashboard_widget() {
 	wp_add_dashboard_widget('smoothie_dashboard_widget', 'Smoothie Creative', 'smoothie_dashboard_widget_function');
-
- 	global $wp_meta_boxes;
- 	$normal_dashboard = $wp_meta_boxes['dashboard']['normal']['core'];
- 	$example_widget_backup = array( 'smoothie_dashboard_widget' => $normal_dashboard['smoothie_dashboard_widget'] );
- 	unset( $normal_dashboard['smoothie_dashboard_widget'] );
- 	$sorted_dashboard = array_merge( $example_widget_backup, $normal_dashboard );
- 	$wp_meta_boxes['dashboard']['normal']['core'] = $sorted_dashboard;
 }
 add_action('wp_dashboard_setup', 'smoothie_add_dashboard_widget', 1 );
 
