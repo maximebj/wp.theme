@@ -1,14 +1,13 @@
-	</div><!-- /wrapper -->
 
-  	<div class="footer">
-  		<div class="wrapper">
+    <div class="footer">
+      <div class="wrapper">
 
-  		</div>
-  	</div>
+      </div>
+    </div>
 
-	<?php wp_footer(); ?>
+  <?php wp_footer(); ?>
 
-	<!-- Google Analytics -->
+  <!-- Google Analytics -->
 
 </body>
 </html>
