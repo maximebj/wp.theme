@@ -97,33 +97,10 @@ strong
 //  = Borders =
 //  ===========
 
-hr, 
+hr
 .separator
-    border none
-    border-bottom border
-
-.separator--tiny
-    width 100px
-    border-bottom 1px solid neutral
-    margin 30px auto
-    
-
-//  =====================
-//  = Big Centered Text =
-//  =====================
-
-.big-text
-	text-align center
-	font-size 130%
-	line-height 1.5
-
-
-// labels
-// TODO
-
-
-// Hero unit
-// TODO
+  border none
+  border-bottom border    
 
 
 //  ===========
@@ -168,9 +145,9 @@ input[type=submit],
 a
 	color color-1
 
-a,
-button,
-input[type=submit],
+a
+button
+input[type=submit]
 [class^=button]
 	transition all transition-speed ease-in-out
 
@@ -189,163 +166,3 @@ textarea
 	font-size font-size
 	width 100%
 	margin 0
-	
-
-//  ========
-//  = Menu =
-//  ========
-
-.current_page_item,
-.current_page_parent
-	color color-1
-	
-
-//  ================
-//  = Post content =
-//  ================
-
-.content 
-	a 
-		color link-color
-		
-		&:hover
-			color hover-color
-
-		//&:[rel *=attachment]
-		
-	ul  
-		list-style-type circle 
-	ol  
-		list-style-type decimal 
-	li  
-		margin-left 2em 
-		
-	p, li
-		line-height 1.6
-
-	// Oembed styles
-	.twitter-tweet 
-		width 100%
-
- 	// Images alignment
-	.aligncenter
-    display block
-    margin 1em auto 
-
-  .alignright 
-		float right
-		margin 1em 0 1em 1em
-	
-	.alignleft 
-		float left
-		margin 1em 1em 1em 0
-
-	.wp-caption 
-		text-align center
-		padding .5em
-		width auto !important
-
-		p 
-			margin 0
-			font-size .7em
-	
-	// Gallery
-
-	.gallery 
-		br  
-			clear none !important 
-			display none 
-
-	.gallery-columns-1 .gallery-item  
-		width 100% 
-	.gallery-columns-2 .gallery-item  
-		width 50% 
-	.gallery-columns-3 .gallery-item  
-		width 33.33333333% 
-	.gallery-columns-4 .gallery-item  
-		width 25% 
-	.gallery-columns-5 .gallery-item  
-		width 20% 
-	.gallery-columns-6 .gallery-item  
-		width 16.66666667% 
-
-	.gallery-item 
-		display block
-		text-align center
-		margin-bottom col-padding
-
-		img 
-			display block
-			
-	blockquote
-		border-left 2px solid #ccc
-		font-style italic
-		font-size 1.2em
-		margin-left 10px
-		padding-left 20px
-		color txt-color-light
-		
-
-// Commentaires
-
-.comments
-  color white
-  margin 100px 0
-  
-  h2
-    text-align center
-    margin 2em 0
-    
-  
-  input[type=text]
-  textarea
-    background #444
-    color #bbb
-    font-family font
-    
-  input[type=text]
-    width 50%
-    display block
-    
-  input.submit
-    background brand-green
-    color white
-    text-align center
-    border-radius radius
-    border none
-    font-weight 600
-    font-size font-size
-    cursor pointer
-    
-    &:hover
-      text-shadow 0 2px rgba(0,0,0,.2)
-
-.comment
-  position relative
-  margin-bottom 70px
-  
-  &:before
-    position absolute
-    bottom -10px
-    content ''
-    display block
-    width 50px
-    border-top 1px solid #444
-    
-.comment-author img
-  width 48px
-  border-radius 50%
-  float left
-  margin-right 15px
-  
-.comment-meta
-  font-size 0.7em
-  letter-spacing 2px
-  text-transform uppercase
-  margin-bottom 10px
-  
-  a
-    color #666
-    
-.wp-smiley
-  width 16px

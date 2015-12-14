@@ -12,6 +12,6 @@
   <div class="header">
     <div class="wrapper">
       <a href="<?php echo home_url('/'); ?>"></a> <?php _e('Hello there !', 'dysign'); ?>
-      <?php wp_nav_menu( array('theme_location' => 'main-menu', 'container' => false, 'menu_class' => 'menu',  )); ?>
+      <?php wp_nav_menu( array('theme_location' => 'main', 'container' => false, 'menu_class' => 'menu')); ?>
     </div>
   </div>

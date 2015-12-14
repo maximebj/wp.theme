@@ -23,8 +23,8 @@ function dysign_theme_setup() {
 
   // Menus
   register_nav_menus( array(
-    'main-menu' => 'Menu Principal',
-    'footer-menu' => 'Pied de page'
+    'main' => 'Menu Principal',
+    'footer' => 'Pied de page'
   ) );
 
 
@@ -54,11 +54,14 @@ add_action( 'after_setup_theme', 'dysign_theme_setup' );
 //  ================
 
 function dysign_add_js_scripts() {
+  
   // goodbye jquery migrate
   wp_deregister_script( 'jquery' ); 
   wp_enqueue_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js', false, '2.1.4', true);
 
+  // main script
   wp_enqueue_script( 'script', get_template_directory_uri().'/js/script.js', array('jquery'), '1.0', true );
+
 }
 add_action('wp_enqueue_scripts', 'dysign_add_js_scripts');
 
