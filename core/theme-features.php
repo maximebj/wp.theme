@@ -6,7 +6,7 @@
 //  ================
 
 // Change query if filter set
-function smoothie_pre_get_posts($wp_query) {
+function dysign_pre_get_posts($wp_query) {
 
   // if($wp_query->is_main_query() and !is_admin() and (is_home() or is_archive())):
     
@@ -36,11 +36,11 @@ function smoothie_pre_get_posts($wp_query) {
   // endif;
 
 }
-//add_action('pre_get_posts', 'smoothie_pre_get_posts');
+//add_action('pre_get_posts', 'dysign_pre_get_posts');
 
 
 // Add rewrite rules for filters
-function smoothie_url_rewrite() {
+function dysign_url_rewrite() {
   //global $wp_rewrite;
 
   // # filtres
@@ -58,7 +58,7 @@ function smoothie_url_rewrite() {
 
   // //$wp_rewrite->flush_rules();
 }
-//add_action('init', 'smoothie_url_rewrite');
+//add_action('init', 'dysign_url_rewrite');
 
 
 
@@ -67,7 +67,7 @@ function smoothie_url_rewrite() {
 //  = Save post hook =
 //  ==================
 
-function smoothie_save_post($post_id, $post, $update) {
+function dysign_save_post($post_id, $post, $update) {
 
   // If this isn't a post, don't update it.
   if ( $post->post_type != 'post'):
@@ -77,6 +77,6 @@ function smoothie_save_post($post_id, $post, $update) {
   //if ($field = get_field_object('id_de_la_video', $post_id) and $field['value']):
   //endif;
 }
-//add_action( 'save_post', 'smoothie_save_post', 10, 3 );
+//add_action( 'save_post', 'dysign_save_post', 10, 3 );
 
 

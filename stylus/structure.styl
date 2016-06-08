@@ -14,13 +14,7 @@ a
 //  ====================
 
 // Box sizing : border box
-div,
-article,
-a,
-img,
-input,
-textarea,
-label
+*
   box-sizing border-box
 
 
@@ -136,30 +130,25 @@ img
     max-width inherit
 
 // fluid iframes
+embed
 iframe
+object
+video
   max-width 100%
+  display block
+  
 
 
 //  =======================
 //  = Mobile / Pad basics =
 //  =======================
 
-@media screen and (max-width: 1280px)
-  body
-    font-size 14px
+//@media screen and (max-width: 1023px)
 
-  .wrapper
-    padding 0
 
-@media screen and (max-width: 1023px)
-  .no-small
-    display none !important
+// @media screen and (max-width: 767px)
+//   .no-small
+//     display none !important
 
-  .c1-2, .c1-3, .c2-3, .c3-4
-    width 100%
-
-  .footer
-    padding-top 25px !important
-
-    .c1-2, .c1-3, .c2-3
-      width: 50%
+//   .c1-2, .c1-3, .c2-3, .c3-4
+//     width 100%

@@ -2,16 +2,16 @@
 /*
 // Add authorized filters for API
 
-function smoothie_json_api_addfilters($filters){
+function dysign_json_api_addfilters($filters){
   $metaparts = array('meta_key', 'meta_value', 'meta_compare', 'date_query');
   $filters = array_merge($filters, $metaparts);
   return $filters;
 }
-add_filter('json_query_vars', 'smoothie_json_api_addfilters');
+add_filter('json_query_vars', 'dysign_json_api_addfilters');
 
 
 // Add custom fields to json response
-function smoothie_json_api_addcustomfields($data, $post, $context) {
+function dysign_json_api_addcustomfields($data, $post, $context) {
 
   $metas = get_post_meta( $post['ID'] );
 
@@ -26,5 +26,5 @@ function smoothie_json_api_addcustomfields($data, $post, $context) {
   return $data;
 
 }
-add_filter( 'json_prepare_post', 'smoothie_json_api_addcustomfields', 10, 3 );
+add_filter( 'json_prepare_post', 'dysign_json_api_addcustomfields', 10, 3 );
 */

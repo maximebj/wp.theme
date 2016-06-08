@@ -2,9 +2,9 @@
 //  = Menu =
 //  ========
 
-.current_page_item,
-.current_page_parent
-  color color-1
+.current_page_item a,
+.current_page_parent a
+  color brand-color
   
 
 //  ================
@@ -90,10 +90,12 @@
     font-size 1.2em
     margin-left 10px
     padding-left 20px
-    color txt-color-light
-    
+    //color 
+ 
 
-// Commentaires
+//  ============
+//  = Comments =
+//  ============
 
 .comments
   color white
@@ -115,14 +117,12 @@
     display block
     
   input.submit
-    background brand-green
+    background color-1
     color white
     text-align center
     border-radius radius
     border none
     font-weight 600
-    font-size font-size
-    cursor pointer
     
     &:hover
       text-shadow 0 2px rgba(0,0,0,.2)

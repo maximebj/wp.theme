@@ -25,8 +25,8 @@
 
 
 
-// add_action( 'wp_ajax_search', 'search' );
-// add_action( 'wp_ajax_nopriv_search', 'search' );
+// add_action( 'wp_ajax_search', 'dysign_search' );
+// add_action( 'wp_ajax_nopriv_search', 'dysign_search' );
 
 // function search() {
 //     // récupération du mot tapé dans la recherche

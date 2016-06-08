@@ -25,7 +25,7 @@ function dysign_theme_setup() {
   register_nav_menus( array(
     'main' => 'Menu Principal',
     'footer' => 'Pied de page'
-  ) );
+  ));
 
 
   // Editor Tiny MCE custom styles
@@ -39,11 +39,15 @@ function dysign_theme_setup() {
     'comment-list',
     'gallery',
     'caption',
-  ) );
+  ));
 
 
   // RSS
   add_theme_support( 'automatic-feed-links' );
+
+
+  // Remove post format
+  remove_theme_support( 'post-formats' );
 
 }
 add_action( 'after_setup_theme', 'dysign_theme_setup' );
@@ -100,6 +104,16 @@ function dysign_excerpt_more($more) {
 }
 add_filter('excerpt_more', 'dysign_excerpt_more');
 */
+
+
+//  =======================
+//  = Admin custom styles =
+//  =======================
+
+// function dysign_admin_theme_style() {
+//   wp_enqueue_style('custom-admin', get_template_directory_uri().'/css/admin.css');
+// }
+// add_action('admin_enqueue_scripts', 'dysign_admin_theme_style');
 
 
 //  ===========================

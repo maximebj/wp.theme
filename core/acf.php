@@ -1,5 +1,20 @@
 <?php
 
+
+//  ===================================
+//  = ACF Auto save Json group fields =
+//  ===================================
+
+function dysign_acf_json_save_point( $path ) {
+    
+  $path = get_stylesheet_directory() . '/acf-json';
+  
+  return $path;
+    
+}
+
+add_filter('acf/settings/save_json', 'dysign_acf_json_save_point');
+
 //  =====================
 //  = ACF Options pages =
 //  =====================
