@@ -291,6 +291,13 @@ add_filter( 'upload_mimes', 'dysign_mime_types' );
 */
 
 
+//  ==================
+//  = Remove XML RPC =
+//  ==================
+
+add_filter('xmlrpc_enabled', '__return_false');
+
+
 //  ===========================
 //  = Create dysign Metabox =
 //  ===========================
