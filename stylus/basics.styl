@@ -1,0 +1,196 @@
+*
+  box-sizing border-box
+  // background rgba(red, 10%) // Debug stuff
+
+*:focus
+  outline none
+
+body
+  font-size font-size
+  line-height line-height
+  font-family font
+  color txt-color
+  -webkit-font-smoothing antialiased
+
+.main
+  overflow hidden
+
+h1
+  line-height 1.5
+  margin 0
+  padding 0
+  font-weight 300
+  text-transform uppercase
+  letter-spacing 2px
+  color title-color
+
+  +not-mobile()
+    font-size 2.2em
+
+  +mobile()
+    font-size 1.7em
+
+h2
+  line-height 1.5
+  margin 0
+  font-weight 300
+  color darken(title-color, 10%)
+
+  +not-mobile()
+    font-size 1.8em
+
+  +mobile()
+    font-size 1.5em
+
+h3
+  margin 1em 0
+  font-weight 300
+  color title-color
+
+  +not-mobile()
+    font-size 1.5em
+
+  +mobile()
+    font-size 1.3em
+
+h4
+  font-size 1.2em
+  font-weight 300
+  color title-color
+
+  img
+    display inline-block
+    height 26px
+    vertical-align middle
+    margin-right 6px
+
+hgroup h2 + h3
+  margin-top 6px
+
+
+main
+  overflow auto
+
+p
+  margin 0
+
+strong
+  font-weight bold
+
+a
+  color link-color
+  transition all transition-speed ease-in-out
+  text-decoration none
+
+img
+  max-width 100%
+  height auto
+
+embed
+iframe
+object
+video
+  max-width 100%
+  display block
+
+ul
+ol
+  margin 0
+  padding 0
+
+table
+  width 100%
+  border-collapse collapse
+
+// Common Styles
+
+.center
+  text-align center
+
+.hidden
+  display none
+
+.hide-mobile
+  +mobile()
+    display none
+
+.show-mobile
+  +not-mobile()
+    display none
+
+.neutral
+  background neutral
+
+.with-margins
+  margin-top pad-l
+  margin-bottom pad-l
+
+.with-top-margin
+  margin-top pad-l
+
+.with-bottom-margin
+  margin-bottom pad-l
+
+.cant-scroll
+  height 100%
+  overflow hidden
+
+.centered-on-mobile
+  +not-desktop()
+    text-align center
+
+.for-desktop
+  +mobile()
+    display none
+
+.for-mobile
+  +not-mobile()
+    display none
+
+// Structure
+
+.section
+  +not-mobile()
+    padding pad-xl 0
+
+  +mobile()
+    padding pad-m 0
+
+.section-neutral
+  background neutral
+
+.container
+  margin 0 auto
+  width 100%
+  max-width site-max-width
+
+  +desktop()
+    padding 0 pad-xl
+
+  +tablet()
+    padding 0 pad-s
+
+  +mobile()
+    padding 0 pad-s
+
+.container.is-skinny
+  max-width (site-max-width * 0.75)
+
+.container.is-tiny
+  max-width (site-max-width * 0.5)
+
+.container-not-mobile
+  +mobile()
+    padding 0
+
+// Page
+
+.page
+  background white
+
+  +mobile()
+    padding pad-s
+
+.page-narrow
+  max-width 800px
+  margin 0 auto

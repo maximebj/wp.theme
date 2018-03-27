@@ -1,0 +1,48 @@
+// Flex multi-line
+.collection
+  display flex
+  flex-wrap wrap
+
+.collection-item
+  margin pad-s
+
+  &.is-25
+    width calc(25% - 40px)
+
+  &.is-50
+    width calc(50% - 40px)
+
+
+// Flex mono-line
+.flex
+  display flex
+
+.f1
+  flex 1
+
+.f2
+  flex 2
+
+.f3
+  flex 3
+
+
+
+.with-gap-xs > div
+  +desktop()
+    margin 0 pad-xs
+
+.with-gap-s > div
+  +desktop()
+    margin 0 pad-s
+
+.with-gap-m > div
+  +desktop()
+    margin 0 pad-m
+
+.collection-item
+  +not-desktop()
+    margin 0 pad-xs pad-l
+
+.with-verticaly-centered-cols
+  align-items center
