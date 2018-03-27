@@ -12,9 +12,6 @@ body
   color txt-color
   -webkit-font-smoothing antialiased
 
-.main
-  overflow hidden
-
 h1
   line-height 1.5
   margin 0
@@ -57,19 +54,6 @@ h4
   font-size 1.2em
   font-weight 300
   color title-color
-
-  img
-    display inline-block
-    height 26px
-    vertical-align middle
-    margin-right 6px
-
-hgroup h2 + h3
-  margin-top 6px
-
-
-main
-  overflow auto
 
 p
   margin 0
@@ -156,9 +140,6 @@ table
   +mobile()
     padding pad-m 0
 
-.section-neutral
-  background neutral
-
 .container
   margin 0 auto
   width 100%
@@ -182,15 +163,3 @@ table
 .container-not-mobile
   +mobile()
     padding 0
-
-// Page
-
-.page
-  background white
-
-  +mobile()
-    padding pad-s
-
-.page-narrow
-  max-width 800px
-  margin 0 auto
