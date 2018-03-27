@@ -1,9 +1,8 @@
-  <div class="footer">
-    <div class="wrapper">
-      <p class="footer__title"><?php the_field('stay_tuned', 'options'); ?></p>
+  <footer class="footer">
+    <div class="container">
       <?php wp_nav_menu( array('theme_location' => 'footer', 'container' => false, 'menu_class' => 'menu')); ?>
     </div>
-  </div>
+  </footer>
 
   <?php wp_footer(); ?>
 

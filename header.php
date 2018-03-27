@@ -10,7 +10,7 @@
 
 <body <?php body_class(); ?>>
   <div class="header">
-    <div class="wrapper">
+    <div class="container">
       <a href="<?php echo home_url('/'); ?>"></a> <?php _e('Hello there !', 'dysign'); ?>
       <?php wp_nav_menu( array('theme_location' => 'main', 'container' => false, 'menu_class' => 'menu')); ?>
     </div>
