@@ -81,7 +81,7 @@ add_action( 'widgets_init', 'dysign_widgets_init' );
 //  = Excerpt =
 //  ===========
 
-/*
+
 
 function dysign_excerpt_length($length) {
   return 20;
