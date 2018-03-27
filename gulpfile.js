@@ -32,8 +32,8 @@ gulp.task("stylus", function() {
 
 
 gulp.task("watch", ["browser-sync"], function() {
-  gulp.watch("./stylus/**/*.styl", ["stylus"])
-  gulp.watch("./*.php").on("change", bs.reload)
-  gulp.watch("./*.js").on("change", bs.reload)
-  gulp.watch("./views/**/*.twig").on("change", bs.reload)
+  gulp.watch("stylus/**/*.styl", ["stylus"])
+  gulp.watch("*.php").on("change", bs.reload)
+  gulp.watch("*.js").on("change", bs.reload)
+  gulp.watch("views/**/*.twig").on("change", bs.reload)
 })
