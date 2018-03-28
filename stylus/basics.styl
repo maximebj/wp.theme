@@ -127,36 +127,3 @@ table
 .for-mobile
   +not-mobile()
     display none
-
-// Structure
-
-.section
-  +not-mobile()
-    padding pad-xl 0
-
-  +mobile()
-    padding pad-m 0
-
-.container
-  margin 0 auto
-  width 100%
-  max-width site-max-width
-
-  +desktop()
-    padding 0 pad-xl
-
-  +tablet()
-    padding 0 pad-s
-
-  +mobile()
-    padding 0 pad-s
-
-.container.is-skinny
-  max-width (site-max-width * 0.75)
-
-.container.is-tiny
-  max-width (site-max-width * 0.5)
-
-.container-not-mobile
-  +mobile()
-    padding 0

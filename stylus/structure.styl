@@ -1,0 +1,85 @@
+// 1. Section
+
+.section
+  +not-mobile()
+    padding pad-xl 0
+
+  +mobile()
+    padding pad-m 0
+
+
+// 2. Container
+
+.container
+  margin 0 auto
+  width 100%
+  max-width site-max-width
+
+  +desktop()
+    padding 0 pad-xl
+
+  +tablet()
+    padding 0 pad-m
+
+  +mobile()
+    padding 0 pad-s
+
+.container.is-skinny
+  max-width (site-max-width * 0.75)
+
+
+// 3. Columns
+
+// -- Flex multi-line
+
+.collection
+  display flex
+  flex-wrap wrap
+
+.collection__item
+
+  +mobile()
+    width 100%
+    margin pad-xs 0
+
+  &.is-25
+    +desktop()
+      width calc(25% - 40px)
+      margin pad-s
+
+    +tablet()
+      width calc(50% - 24px)
+      margin pad-xs
+
+  &.is-50
+    +not-mobile()
+      width calc(50% - 40px)
+      margin pad-s
+
+
+// -- Flex mono-line
+
+.flex
+  display flex
+
+.f1
+  flex 1
+
+.f2
+  flex 2
+
+.f3
+  flex 3
+
+
+.with-gap-xs > div
+  +desktop()
+    margin 0 pad-xs
+
+.with-gap-s > div
+  +desktop()
+    margin 0 pad-s
+
+.with-gap-m > div
+  +desktop()
+    margin 0 pad-m
