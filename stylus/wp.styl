@@ -8,13 +8,14 @@
 // Post content
 
 .content
-  a
-    color link-color
+  h2
+  h3
+  h4
+    margin 2.5em 0 1.5em
 
-    &:hover
-      color hover-color
+    &:first-child
+      margin-top 0
 
-    //&:[rel *=attachment]
 
   ul
     list-style-type circle
@@ -28,7 +29,15 @@
     line-height 1.6
 
   p
+  ul
+  ol
     margin 1.5em 0
+
+  a
+    color link-color
+
+    &:hover
+      color hover-color
 
   // Oembed styles
   .twitter-tweet
