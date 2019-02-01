@@ -41,7 +41,7 @@ function dysign_theme_setup() {
   // Remove post format
   remove_theme_support( 'post-formats' );
 
-  // Gutenberg - Format large
+  // Gutenberg - Wide blocks
   add_theme_support( 'align-wide' );
 
 }
