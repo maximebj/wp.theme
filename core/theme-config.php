@@ -126,10 +126,16 @@ add_action( 'init','dysign_change_author_permalinks' );
 // =====================
 
 function dysign_dequeue_script() {
-  //wp_dequeue_script('');
-  //wp_dequeue_syle('');
+  
+  // Remove Gutenberg frontend styles
+  wp_dequeue_style( 'wp-block-library' );
+  wp_dequeue_style( 'wp-block-library-theme' );
+
+  // remove WooCommerce stylesheet
+  wp_dequeue_style( 'wc-block-style' );
+
 }
-add_action( 'wp_print_scripts', 'dysign_dequeue_script', 100 );
+//add_action( 'wp_print_scripts', 'dysign_dequeue_script', 1000 );
 
 // USE ONLY to find script and style names. Deactivate then.
 // function dysign_inspect_scripts() {
